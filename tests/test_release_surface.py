@@ -25,7 +25,7 @@ class ReleaseSurfaceTests(unittest.TestCase):
         name, version = MODULE.verify_metadata(plugin, marketplace)
         self.assertGreater(count, 40)
         self.assertEqual(name, "codex-binder-lane")
-        self.assertEqual(version, "0.3.5")
+        self.assertEqual(version, "0.3.6")
 
     def test_plugin_manifest_default_prompts_fit_codex_limit(self) -> None:
         _, plugin, _ = MODULE.verify_receipt(ROOT)
@@ -102,6 +102,7 @@ class ReleaseSurfaceTests(unittest.TestCase):
             "docs/release-notes-0.3.3.md",
             "docs/release-notes-0.3.4.md",
             "docs/release-notes-0.3.5.md",
+            "docs/release-notes-0.3.6.md",
             "public-export-receipt.json",
             "scripts/verify_public_export.py",
         }
@@ -213,6 +214,18 @@ class ReleaseSurfaceTests(unittest.TestCase):
         self.assertTrue(
             (ROOT / "plugins/codex-binder-lane/.codex-plugin/plugin.json").is_file()
         )
+
+    def test_readme_names_recommended_computational_companions(self) -> None:
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        for companion in (
+            "NVIDIA BioNeMo Agent Toolkit",
+            "Biohub ESM",
+            "Life Sciences Databases",
+            "Molecular Structure Viewer",
+            "Biological Sequence & Alignment Viewer",
+        ):
+            with self.subTest(companion=companion):
+                self.assertIn(companion, readme)
 
     def test_store_submission_materials_are_complete(self) -> None:
         submission = json.loads(

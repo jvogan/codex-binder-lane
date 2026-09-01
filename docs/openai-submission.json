@@ -81,7 +81,7 @@
       }
     ]
   },
-  "release_notes": "Codex Binder Lane 0.3.5 keeps the complete binder-design workflow computational: choose or propose the structure, target site, tools, scale, metrics, and stop rules; compare and refine candidates; and deliver sequences, structures, metrics, visuals, optional video, costs, and raw files.",
+  "release_notes": "Codex Binder Lane 0.3.6 presents the complete computational workflow clearly: Codex can choose the structure, target site, tools, routes, and scale; run parallel lanes; iterate by metrics; and deliver sequences, structures, visuals, video, and a report.",
   "portal_only_checks": [
     "Select the verified Jacob Vogan developer identity in the publishing organization.",
     "Confirm the submitter has Apps Management write permission in that organization.",

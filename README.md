@@ -35,7 +35,7 @@ Use Binder Lane when Codex must coordinate several binder-design steps or compar
 Install the current stable release from its exact tag:
 
 ```bash
-codex plugin marketplace add jvogan/codex-binder-lane --ref v0.3.5
+codex plugin marketplace add jvogan/codex-binder-lane --ref v0.3.6
 codex plugin add codex-binder-lane@codex-binder-lane
 ```
 
@@ -65,6 +65,16 @@ For the combined workflow:
 3. Review the plan and costs, then run the selected tools and collect their sequences, structures, scores, and images.
 
 Installing Binder Lane does not add a Binder Lane tile inside Rosalind. Invoke Binder Lane directly in Codex.
+
+### Recommended computational companions
+
+- **NVIDIA BioNeMo Agent Toolkit:** Run complete design workflows or compose RFdiffusion, ProteinMPNN, Boltz-2, OpenFold, and Complexa stages.
+- **Biohub ESM:** Add sequence modeling, structure prediction, and an alternate design lane.
+- **Life Sciences Databases:** Resolve targets and structures with sources such as UniProt, RCSB PDB, and AlphaFold DB.
+- **Molecular Structure Viewer:** Inspect, compare, render, and animate target–binder structures in Codex.
+- **Biological Sequence & Alignment Viewer:** Compare candidate sequences, alignments, annotations, and diversity.
+
+Rosalind can help you discover these plugins. Enable only the companions needed for a campaign; Binder Lane can also use compatible APIs, cloud jobs, local tools, and mixed routes.
 
 ## Start in Codex
 

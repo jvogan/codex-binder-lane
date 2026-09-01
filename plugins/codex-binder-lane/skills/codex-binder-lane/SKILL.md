@@ -5,11 +5,11 @@ description: Use for multi-stage protein-binder campaigns. Choose a target struc
 
 # Codex Binder Lane
 
-Binder Lane coordinates multi-stage protein-binder campaigns. Define the target, chain, numbering, site, candidate scope, and outputs. Then write one plan, choose the tools, run the stages, and check the results. Deliver each candidate's sequence, site metrics, target–binder coordinates, and a target view with the site highlighted.
+Give Codex a protein target and your constraints. Codex can choose the structure, target site, tools, routes, and campaign size; run and compare parallel lanes; filter and iterate on candidates; and return sequences, target–binder structures, metrics, visuals, video, and a report.
 
 Binder Lane is limited to computational protein design and evaluation.
 
-The user can set each choice or delegate it to Codex. For delegated choices, inspect the goal, target data, available tools, scientific fit, license, privacy, cost, and compute. Then propose the structure, site, tools, routes, candidate count, metrics, rounds, and stop rules. A campaign can mix plugins, APIs, cloud jobs, and local tools.
+Use the user's explicit choices when supplied. For open choices, inspect the goal, target data, available tools, scientific fit, license, privacy, cost, and compute. Then choose the structure, site, tools, routes, candidate count, metrics, rounds, and stop rules. A campaign can mix plugins, APIs, cloud jobs, and local tools.
 
 For a side-by-side comparison, keep the target, site, inputs, candidate count, metrics, and promotion rules fixed. Give each lane a stable ID and separate results. Promote candidates from any lane into a fixed number of follow-up rounds.
 

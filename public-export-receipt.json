@@ -1,5 +1,5 @@
 {
-  "allowlist_sha256": "acc11471524df553fb21a816b6b57d4d23f4474da2b35db460697206638985c4",
+  "allowlist_sha256": "a1fd2aefa48f8742b4fc04986ff1d54453ab28a79a4694111f1807b94962912c",
   "files": [
     {
       "biology_classification": "none",
@@ -29,8 +29,8 @@
       "biology_classification": "none",
       "classification": "public-documentation",
       "path": "CHANGELOG.md",
-      "sha256": "1821e60cba8f0fc2622a30920a6f45c7f1a4ba6798665647c3e85011c2c34f4d",
-      "size_bytes": 7549,
+      "sha256": "8ec2790c483611b91c6f44d535d7ba38c096edb0760a766d60b151d49ba1e06d",
+      "size_bytes": 7893,
       "source": "public/CHANGELOG.md"
     },
     {
@@ -61,15 +61,15 @@
       "biology_classification": "none",
       "classification": "public-documentation",
       "path": "README.md",
-      "sha256": "3ebcd347030d9cfcc57038b042869860697f07e8539796324a6d81853696d683",
-      "size_bytes": 18725,
+      "sha256": "d1cde06585621797073474ad00dd2ab9b4ec80e48b25c7b96097904e5d28924c",
+      "size_bytes": 19530,
       "source": "public/README.md"
     },
     {
       "biology_classification": "none",
       "classification": "public-documentation",
       "path": "SECURITY.md",
-      "sha256": "ad3d7fe5c74a86536bf3d1aebab88df42af7266a64373a855e75cffceb8a7271",
+      "sha256": "83939415da5b101ab0a16dc95c4778a4f270c09f6c81910e994fdef68cede77a",
       "size_bytes": 1343,
       "source": "public/SECURITY.md"
     },
@@ -109,8 +109,8 @@
       "biology_classification": "none",
       "classification": "public-documentation",
       "path": "docs/openai-submission.json",
-      "sha256": "dacdb872df54711cd21d7203555fe3d223b98a540d69ce984ab4ea36b8af4fa2",
-      "size_bytes": 7954,
+      "sha256": "ee7a49369f747c799251d21b80309c3c667c1df6dba82f55d195ed02d2cbe422",
+      "size_bytes": 7920,
       "source": "public/docs/openai-submission.json"
     },
     {
@@ -187,9 +187,17 @@
     },
     {
       "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "docs/release-notes-0.3.6.md",
+      "sha256": "81a0b2c27a8a20fb33cdd28740c5e0191b5f925e8ede643da3ef1f403dce217e",
+      "size_bytes": 765,
+      "source": "public/docs/release-notes-0.3.6.md"
+    },
+    {
+      "biology_classification": "none",
       "classification": "plugin-metadata",
       "path": "plugins/codex-binder-lane/.codex-plugin/plugin.json",
-      "sha256": "0b60e82ef830e8b7b025dff526ee4efd9a85aa3004c30b86690797a0177722f6",
+      "sha256": "49a0ba3d7453d976bd138b1d303557a5dfa8911903cfbec1a0d24847280dd395",
       "size_bytes": 1895,
       "source": ".codex-plugin/plugin.json"
     },
@@ -221,15 +229,15 @@
       "biology_classification": "none",
       "classification": "plugin-source",
       "path": "plugins/codex-binder-lane/skills/codex-binder-lane/SKILL.md",
-      "sha256": "4a26d3fa77b81bbaf88344a0d0110d00c8f317276e6e3143583e6c8e1be56017",
-      "size_bytes": 24580,
+      "sha256": "383cbfc32e4850af65cb68b5339fbf481bfe6ac32679ebf05217529cbeb87b1d",
+      "size_bytes": 24515,
       "source": "skills/codex-binder-lane/SKILL.md"
     },
     {
       "biology_classification": "none",
       "classification": "plugin-source",
       "path": "plugins/codex-binder-lane/skills/codex-binder-lane/agents/openai.yaml",
-      "sha256": "6d8da3cb51727cb6da84cc87cd60047877a895b5cd63da73c54124de1c6d5c1d",
+      "sha256": "577cf02c62a14a2831fc3d63c86f1c299b90330b9d32550853a13bf9789c9ef5",
       "size_bytes": 288,
       "source": "skills/codex-binder-lane/agents/openai.yaml"
     },
@@ -637,8 +645,8 @@
       "biology_classification": "none",
       "classification": "plugin-source",
       "path": "tests/test_release_surface.py",
-      "sha256": "9e7221268b29896b94b8b48e38f69bbe0889ecc03751c4db40a36303cdad513f",
-      "size_bytes": 11906,
+      "sha256": "0168d75a32963843c0e27fd49aa19e17c9564acafd1cc88ab334ed871ce3329a",
+      "size_bytes": 12438,
       "source": "public/tests/test_release_surface.py"
     }
   ],

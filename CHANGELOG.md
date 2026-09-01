@@ -4,6 +4,14 @@ This file records user-visible Codex Binder Lane changes.
 
 ## [Unreleased]
 
+## [0.3.6] - 2026-09-01
+
+### Changed
+
+- Lead with Codex choosing, running, comparing, iterating, and delivering the campaign.
+- Recommend BioNeMo, Biohub ESM, public life-science databases, and Codex structure and sequence viewers as optional computational companions.
+- Keep the GitHub-distributed plugin complete and computational in scope.
+
 ## [0.3.5] - 2026-09-01
 
 ### Changed
