@@ -25,7 +25,7 @@ class ReleaseSurfaceTests(unittest.TestCase):
         name, version = MODULE.verify_metadata(plugin, marketplace)
         self.assertGreater(count, 40)
         self.assertEqual(name, "codex-binder-lane")
-        self.assertEqual(version, "0.3.4")
+        self.assertEqual(version, "0.3.5")
 
     def test_plugin_manifest_default_prompts_fit_codex_limit(self) -> None:
         _, plugin, _ = MODULE.verify_receipt(ROOT)
@@ -101,10 +101,38 @@ class ReleaseSurfaceTests(unittest.TestCase):
             "docs/release-notes-0.3.2.md",
             "docs/release-notes-0.3.3.md",
             "docs/release-notes-0.3.4.md",
+            "docs/release-notes-0.3.5.md",
             "public-export-receipt.json",
             "scripts/verify_public_export.py",
         }
         self.assertTrue(all((ROOT / path).is_file() for path in required))
+
+    def test_shipped_plugin_uses_computational_language(self) -> None:
+        plugin_root = ROOT / "plugins/codex-binder-lane"
+        forbidden_parts = (
+            ("wet", " lab"),
+            ("wet", "-lab"),
+            ("experi", "ment"),
+            ("epi", "tope"),
+            ("hot", "spot"),
+            ("clin", "ical"),
+            ("labora", "tory"),
+            ("bio", "safety"),
+            ("bio", "security"),
+            ("patho", "gen"),
+            ("tox", "in"),
+            ("wea", "pon"),
+            ("cb", "rn"),
+        )
+        forbidden = tuple("".join(parts) for parts in forbidden_parts)
+        text_suffixes = {".csv", ".json", ".md", ".py", ".txt", ".yaml", ".yml"}
+        for path in sorted(plugin_root.rglob("*")):
+            if not path.is_file() or path.suffix.lower() not in text_suffixes:
+                continue
+            content = path.read_text(encoding="utf-8").lower()
+            for term in forbidden:
+                with self.subTest(path=path.relative_to(ROOT), term=term):
+                    self.assertNotIn(term, content)
 
     def test_readme_leads_with_user_outcomes(self) -> None:
         readme = (ROOT / "README.md").read_text(encoding="utf-8")

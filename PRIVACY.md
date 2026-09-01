@@ -13,7 +13,7 @@ At the user's direction, Binder Lane may process:
 - candidate sequences, structures, metrics, images, reports, receipts, hashes, logs, and other campaign artifacts; and
 - filesystem paths and coarse environment facts needed to locate selected tools and files.
 
-The publisher does not intentionally collect personal data through the plugin. Do not provide payment-card data, government identifiers, passwords, API keys, authentication secrets, protected health information, or clinical records to Binder Lane.
+The publisher does not intentionally collect personal data through the plugin. Do not provide payment-card data, government identifiers, passwords, API keys, authentication secrets, protected health information, or medical records to Binder Lane.
 
 ## How data is used
 

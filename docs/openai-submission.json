@@ -81,7 +81,7 @@
       }
     ]
   },
-  "release_notes": "Codex Binder Lane 0.3.4 covers the full campaign workflow in plain English: choose or propose the structure, site, tools, scale, metrics, and stop rules; run plugins, APIs, cloud compute, local tools, or a mix; compare matched workflows; refine candidates; and deliver sequences, structures, metrics, visuals, optional video, costs, and raw files.",
+  "release_notes": "Codex Binder Lane 0.3.5 keeps the complete binder-design workflow computational: choose or propose the structure, target site, tools, scale, metrics, and stop rules; compare and refine candidates; and deliver sequences, structures, metrics, visuals, optional video, costs, and raw files.",
   "portal_only_checks": [
     "Select the verified Jacob Vogan developer identity in the publishing organization.",
     "Confirm the submitter has Apps Management write permission in that organization.",

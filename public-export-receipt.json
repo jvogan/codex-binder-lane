@@ -1,5 +1,5 @@
 {
-  "allowlist_sha256": "6d01cd5e3ebf846057e944680ee6551152d78157e246ae55b1128a40a22932d3",
+  "allowlist_sha256": "acc11471524df553fb21a816b6b57d4d23f4474da2b35db460697206638985c4",
   "files": [
     {
       "biology_classification": "none",
@@ -29,8 +29,8 @@
       "biology_classification": "none",
       "classification": "public-documentation",
       "path": "CHANGELOG.md",
-      "sha256": "e3e919ff02056218af3835a12e8461a0e2bba24f31cfacc639631d1bb20f35eb",
-      "size_bytes": 7238,
+      "sha256": "1821e60cba8f0fc2622a30920a6f45c7f1a4ba6798665647c3e85011c2c34f4d",
+      "size_bytes": 7549,
       "source": "public/CHANGELOG.md"
     },
     {
@@ -53,15 +53,15 @@
       "biology_classification": "none",
       "classification": "public-documentation",
       "path": "PRIVACY.md",
-      "sha256": "a0e399b5b3dc57737f95869cef6229f93ed626ca340970badbf3d4de1181fab9",
-      "size_bytes": 3893,
+      "sha256": "2b3603363bfd63487a0975f62c0e6770788597e15aaa61df34472611c9e951bc",
+      "size_bytes": 3892,
       "source": "public/PRIVACY.md"
     },
     {
       "biology_classification": "none",
       "classification": "public-documentation",
       "path": "README.md",
-      "sha256": "f5f23f65387f750b7fa4385de41d9c31cc1739103a0517ad906c208162b6030c",
+      "sha256": "3ebcd347030d9cfcc57038b042869860697f07e8539796324a6d81853696d683",
       "size_bytes": 18725,
       "source": "public/README.md"
     },
@@ -69,7 +69,7 @@
       "biology_classification": "none",
       "classification": "public-documentation",
       "path": "SECURITY.md",
-      "sha256": "8d81cd184b844286083cc080ee94d4c337b54ca10c220fedf239b3df0df0e4d0",
+      "sha256": "ad3d7fe5c74a86536bf3d1aebab88df42af7266a64373a855e75cffceb8a7271",
       "size_bytes": 1343,
       "source": "public/SECURITY.md"
     },
@@ -77,8 +77,8 @@
       "biology_classification": "none",
       "classification": "public-documentation",
       "path": "TERMS.md",
-      "sha256": "0c974918a1d3fec6d548b87471ed10680386f15ea7da925c56c54c3ceca3441c",
-      "size_bytes": 3973,
+      "sha256": "2dc74821c3422759eeda85d0ae36f4f1169e4dfafd0410f4dab6cf03df27ca93",
+      "size_bytes": 3903,
       "source": "public/TERMS.md"
     },
     {
@@ -109,8 +109,8 @@
       "biology_classification": "none",
       "classification": "public-documentation",
       "path": "docs/openai-submission.json",
-      "sha256": "84dcae77803f37734f25ea8a4939d2a6ae16fa0060175f5bfcbae065f1f489b0",
-      "size_bytes": 8014,
+      "sha256": "dacdb872df54711cd21d7203555fe3d223b98a540d69ce984ab4ea36b8af4fa2",
+      "size_bytes": 7954,
       "source": "public/docs/openai-submission.json"
     },
     {
@@ -179,9 +179,17 @@
     },
     {
       "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "docs/release-notes-0.3.5.md",
+      "sha256": "ee6c0761fdedcea87e13ef2e22a0c606812c18e881d0f456c1d6bf488c10cc9d",
+      "size_bytes": 709,
+      "source": "public/docs/release-notes-0.3.5.md"
+    },
+    {
+      "biology_classification": "none",
       "classification": "plugin-metadata",
       "path": "plugins/codex-binder-lane/.codex-plugin/plugin.json",
-      "sha256": "4de58734535107a14b30d915e4a07beab716c9e7080b356b01f4732a9e617f61",
+      "sha256": "0b60e82ef830e8b7b025dff526ee4efd9a85aa3004c30b86690797a0177722f6",
       "size_bytes": 1895,
       "source": ".codex-plugin/plugin.json"
     },
@@ -213,8 +221,8 @@
       "biology_classification": "none",
       "classification": "plugin-source",
       "path": "plugins/codex-binder-lane/skills/codex-binder-lane/SKILL.md",
-      "sha256": "39e121fff06f6718e4101d96ffc355c4094628693ed3d657f1b29737430015d9",
-      "size_bytes": 24483,
+      "sha256": "4a26d3fa77b81bbaf88344a0d0110d00c8f317276e6e3143583e6c8e1be56017",
+      "size_bytes": 24580,
       "source": "skills/codex-binder-lane/SKILL.md"
     },
     {
@@ -277,16 +285,16 @@
       "biology_classification": "none",
       "classification": "public-template",
       "path": "plugins/codex-binder-lane/skills/codex-binder-lane/assets/valid-dry-run-plan.fixture.json",
-      "sha256": "aa4c137b3d1ea36c341fc05594708421e2aefc70d0b08f30c9cbb4d8df6f45f7",
-      "size_bytes": 2729,
+      "sha256": "5902661d6f52a245e434330274b4335a44e1d03386e549709050350715bd4c30",
+      "size_bytes": 2733,
       "source": "skills/codex-binder-lane/assets/valid-dry-run-plan.fixture.json"
     },
     {
       "biology_classification": "none",
       "classification": "public-documentation",
       "path": "plugins/codex-binder-lane/skills/codex-binder-lane/references/bundle-contracts.md",
-      "sha256": "a643ec06f1c2dc43d7e25c38d04cb972909b048867f70b4c162b3a582ecac6bb",
-      "size_bytes": 4839,
+      "sha256": "7bd67f699e89999a8d37bea25432e0d568500921e658f11acd95826ff418d5aa",
+      "size_bytes": 4848,
       "source": "skills/codex-binder-lane/references/bundle-contracts.md"
     },
     {
@@ -301,8 +309,8 @@
       "biology_classification": "none",
       "classification": "public-documentation",
       "path": "plugins/codex-binder-lane/skills/codex-binder-lane/references/capability-routing.md",
-      "sha256": "435d7f2275890fcda48e1e8284075b27e679a8d493d0f3362324f7dd1ea04ed8",
-      "size_bytes": 9462,
+      "sha256": "9dc8214aabf0322c8df663c4890d735a1af428905c98f04923378c66f65c889c",
+      "size_bytes": 9466,
       "source": "skills/codex-binder-lane/references/capability-routing.md"
     },
     {
@@ -325,16 +333,16 @@
       "biology_classification": "none",
       "classification": "public-documentation",
       "path": "plugins/codex-binder-lane/skills/codex-binder-lane/references/execution-and-evidence.md",
-      "sha256": "614a721ded7a8258cba63028cae353e1debd9ab4d0413b8d45a7e4d7659c028b",
-      "size_bytes": 3651,
+      "sha256": "4b7b1859331f2614f28030702f1a1d362c5b33e0c85de248e353733de0430fbc",
+      "size_bytes": 3655,
       "source": "skills/codex-binder-lane/references/execution-and-evidence.md"
     },
     {
       "biology_classification": "none",
       "classification": "public-documentation",
       "path": "plugins/codex-binder-lane/skills/codex-binder-lane/references/plan-contract.md",
-      "sha256": "e6dac070ac2da390ffafb0a4d40b840bafffe1e92de1df6f06ee802edf43487b",
-      "size_bytes": 7945,
+      "sha256": "ca6906e3c4d611aabe3c5a6559624a6400e02c85a8ecd2b472dfbaee10df7258",
+      "size_bytes": 7948,
       "source": "skills/codex-binder-lane/references/plan-contract.md"
     },
     {
@@ -381,8 +389,8 @@
       "biology_classification": "none",
       "classification": "public-documentation",
       "path": "plugins/codex-binder-lane/skills/codex-binder-lane/references/visual-handoffs.md",
-      "sha256": "9274af531938c5d9c60bee1dd6c83b095b07e795db38aceffe5021cae000472f",
-      "size_bytes": 9821,
+      "sha256": "4b7ee29e4bdef5600b0ad7f3b7c3fc8f31a2ba287169ce0af83621848461eb74",
+      "size_bytes": 9832,
       "source": "skills/codex-binder-lane/references/visual-handoffs.md"
     },
     {
@@ -501,8 +509,8 @@
       "biology_classification": "none",
       "classification": "public-template",
       "path": "plugins/codex-binder-lane/tests/fixtures/valid-dry-run-plan.json",
-      "sha256": "aa4c137b3d1ea36c341fc05594708421e2aefc70d0b08f30c9cbb4d8df6f45f7",
-      "size_bytes": 2729,
+      "sha256": "5902661d6f52a245e434330274b4335a44e1d03386e549709050350715bd4c30",
+      "size_bytes": 2733,
       "source": "tests/fixtures/valid-dry-run-plan.json"
     },
     {
@@ -589,8 +597,8 @@
       "biology_classification": "none",
       "classification": "plugin-source",
       "path": "plugins/codex-binder-lane/tests/test_validate_delivery.py",
-      "sha256": "f6597d6b7bff1fd55c30f1acf935983d5b8d6ddb142c5316e893605b241fd49f",
-      "size_bytes": 41374,
+      "sha256": "064a91473ef0826225d587f98edf0623f2b45e62d40b8ff4ad0ca609ee3ac292",
+      "size_bytes": 41394,
       "source": "tests/test_validate_delivery.py"
     },
     {
@@ -629,8 +637,8 @@
       "biology_classification": "none",
       "classification": "plugin-source",
       "path": "tests/test_release_surface.py",
-      "sha256": "7f682f05a9a6503b0d1ca8bc80f658f712ac81accd7fdeeb960497b5b2fef8b3",
-      "size_bytes": 10778,
+      "sha256": "9e7221268b29896b94b8b48e38f69bbe0889ecc03751c4db40a36303cdad513f",
+      "size_bytes": 11906,
       "source": "public/tests/test_release_surface.py"
     }
   ],

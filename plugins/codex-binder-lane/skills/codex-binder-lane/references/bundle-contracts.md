@@ -24,7 +24,7 @@ An artifact reference contains a safe relative POSIX `path`, lowercase SHA-256 d
 
 The manifest lists every payload exactly once in lexical order. It does not list itself or its hash sidecar. The sidecar hashes the exact canonical manifest bytes.
 
-An exhaustive archive manifest and a curated delivery index serve different purposes. The archive may retain execution workspaces and logs. The delivery index contains only artifacts intended for inspection or downstream use. Hash coverage of vendored examples, dependency trees, caches, or tool source does not satisfy delivery closeout.
+An exhaustive archive manifest and a curated delivery index serve different purposes. The archive may retain execution workspaces and logs. The delivery index contains only artifacts intended for inspection or later computational use. Hash coverage of vendored examples, dependency trees, caches, or tool source does not satisfy delivery closeout.
 
 ## Target and site lock
 

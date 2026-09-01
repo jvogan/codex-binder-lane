@@ -1,6 +1,6 @@
 {
   "name": "codex-binder-lane",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Plan and design binders in Codex: pick target sites, tools and comp bio budget, then get your structures and sequences.",
   "author": {
     "name": "Jacob Vogan",

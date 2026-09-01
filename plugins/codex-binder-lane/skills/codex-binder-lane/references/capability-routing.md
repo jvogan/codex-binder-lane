@@ -77,7 +77,7 @@ When this reference is selected:
 
 ## Compare one declared change at a time
 
-To learn whether a swap helped, change one scientific component at a time and hold the target construct, hotspot map, cohort/funnel, prediction inputs, score definitions, and controls constant. Two checkpoint sizes or fast/full variants of the same model are not automatically independent predictors.
+To learn whether a swap helped, change one scientific component at a time and hold the target construct, target-site map, cohort/funnel, prediction inputs, score definitions, and controls constant. Two checkpoint sizes or fast/full variants of the same model are not automatically independent predictors.
 
 Record why a capability was not selected: unavailable, not callable, unauthenticated, license-gated, scientifically unqualified, cost-prohibitive, redundant, or deliberately held out as an independent validator.
 

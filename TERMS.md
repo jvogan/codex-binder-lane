@@ -6,7 +6,7 @@ These terms govern use of the Codex Binder Lane plugin published by Jacob Vogan.
 
 ## Scope
 
-Binder Lane is an open-source, skills-only workflow for planning, supervising, and validating computational protein-binder campaigns. It is a control and evidence layer, not a hosted compute service, laboratory service, medical product, or guarantee of scientific success.
+Binder Lane is an open-source, skills-only workflow for planning, supervising, and validating computational protein-binder campaigns. It is a control and evidence layer, not a hosted compute service, medical product, or guarantee of scientific success.
 
 The plugin's source code and documentation are licensed under the Apache License 2.0. These terms supplement that license for use of the plugin and its public listing; they do not reduce rights granted by the license.
 
@@ -20,9 +20,9 @@ You are responsible for:
 - reviewing scientific assumptions, plans, tool selections, outputs, and evidence before relying on them;
 - obtaining necessary rights, licenses, consents, and approvals for data and external services;
 - protecting credentials and confidential or unpublished data; and
-- complying with export controls, sanctions, biosafety requirements, institutional policies, and other applicable obligations.
+- complying with export controls, sanctions, institutional policies, and other applicable obligations.
 
-Do not use Binder Lane to process payment-card data, government identifiers, passwords, authentication secrets, protected health information, or clinical records. Binder Lane is not intended for clinical diagnosis, treatment decisions, human or animal use, or autonomous laboratory execution.
+Do not use Binder Lane to process payment-card data, government identifiers, passwords, authentication secrets, protected health information, or medical records. Binder Lane is limited to computational protein design and evaluation.
 
 ## External tools, services, and fees
 
@@ -32,7 +32,7 @@ Binder Lane requires explicit authorization before material paid compute, privat
 
 ## Scientific outputs
 
-Computational candidates, scores, structures, visualizations, reports, and receipts are research artifacts. They may be incomplete, inaccurate, non-reproducible, or unsuitable for a particular purpose. Transport validation, file hashes, or agreement between computational methods does not establish experimental binding, efficacy, safety, novelty, freedom to operate, regulatory status, or fitness for use.
+Computational candidates, scores, structures, visualizations, reports, and receipts are research artifacts. They may be incomplete, inaccurate, non-reproducible, or unsuitable for a particular purpose. Transport validation, file hashes, or agreement between computational methods does not establish performance outside the reported computational methods, efficacy, safety, novelty, freedom to operate, regulatory status, or fitness for use.
 
 ## Privacy
 

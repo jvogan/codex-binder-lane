@@ -7,6 +7,8 @@ description: Use for multi-stage protein-binder campaigns. Choose a target struc
 
 Binder Lane coordinates multi-stage protein-binder campaigns. Define the target, chain, numbering, site, candidate scope, and outputs. Then write one plan, choose the tools, run the stages, and check the results. Deliver each candidate's sequence, site metrics, target–binder coordinates, and a target view with the site highlighted.
 
+Binder Lane is limited to computational protein design and evaluation.
+
 The user can set each choice or delegate it to Codex. For delegated choices, inspect the goal, target data, available tools, scientific fit, license, privacy, cost, and compute. Then propose the structure, site, tools, routes, candidate count, metrics, rounds, and stop rules. A campaign can mix plugins, APIs, cloud jobs, and local tools.
 
 For a side-by-side comparison, keep the target, site, inputs, candidate count, metrics, and promotion rules fixed. Give each lane a stable ID and separate results. Promote candidates from any lane into a fixed number of follow-up rounds.
@@ -57,8 +59,8 @@ Hard execution gates are limited to facts that protect the user's intent or data
 
 Before generation, resolve the decisions that affect the selected campaign. Inspect known inputs first. A user can delegate any technical choice that does not cross an authorization boundary.
 
-1. **Purpose and use:** research aim, intended downstream use, public/private data, commercial posture, and safety constraints. If the request omits a choice, record it as unresolved; do not turn silence into permission for an external action.
-2. **Target and site:** exact identity/construct, structure or sequence source, chain, epitope/hotspots, numbering map, binder modality/length, and evidence for accessibility. Inspect supplied structures and records before asking the user. Production generation starts after the target and conditioning inputs are unambiguous.
+1. **Purpose and use:** computational research goal, requested outputs, public/private data, commercial posture, and technical constraints. If the request omits a choice, record it as unresolved; do not turn silence into permission for an external action.
+2. **Target and site:** exact identity/construct, structure or sequence source, chain, target-site residues, numbering map, binder modality/length, and structural evidence for accessibility. Inspect supplied structures and records before asking the user. Production generation starts after the target and conditioning inputs are unambiguous.
 3. **Baseline versus substitution:** reproduce a named reference stack, approximately reproduce its logic, deliberately swap specified components, or choose the best available stack. Never let “reproduce” silently become “approximately similar.” For the public Anthropic binder campaign, use the official, pinned sources in [capability routing](references/capability-routing.md), not a private checkout or remembered summary.
 4. **Tool stack:** generator or codesigner, optional inverse folder, independent validator, scorers, novelty/diversity/developability checks, and viewers.
 5. **Route per stage:** Codex/Rosalind companion skill, hosted API, self-hosted local/Modal/RunPod/Lambda, existing BioSymphony adapter, or manual handoff. Separate scientific choice from transport choice.
@@ -67,7 +69,7 @@ Before generation, resolve the decisions that affect the selected campaign. Insp
 8. **Budget, rounds, and stopping:** hard campaign ceiling, advisory wall-clock cap, license/provider approvals, maximum rounds, parents and variants, mutating operator, convergence rule, and zero-passer stop. Copying candidates is not optimization.
 9. **Evidence and handoff:** manifest/receipt retention, privacy destination, required artifacts, viewer/report outputs, computational claim ceiling, and portable downstream files.
 
-For a side-by-side comparison, represent each lane with stable, unique stage IDs. An end-to-end lane may be one combined stage whose `covers` list declares the full funnel; a decomposed lane may use several stage IDs with the same lane prefix. Record the lane hypothesis and keep shared target/site inputs, candidate counts, seed strategy, metrics, and promotion rules aligned unless a declared experimental difference requires otherwise. Compare scientific results, cost, runtime, failures, and delivered artifacts without treating unlike metrics as interchangeable.
+For a side-by-side comparison, represent each lane with stable, unique stage IDs. An end-to-end lane may be one combined stage whose `covers` list declares the full funnel; a decomposed lane may use several stage IDs with the same lane prefix. Record the lane hypothesis and keep shared target/site inputs, candidate counts, seed strategy, metrics, and promotion rules aligned unless a declared comparison difference requires otherwise. Compare scientific results, cost, runtime, failures, and delivered artifacts without treating unlike metrics as interchangeable.
 
 Write these choices to the initialized `codex-binder-plan.json` using [the plan contract](references/plan-contract.md) and validate it before any companion execution:
 

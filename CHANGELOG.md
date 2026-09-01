@@ -4,6 +4,14 @@ This file records user-visible Codex Binder Lane changes.
 
 ## [Unreleased]
 
+## [0.3.5] - 2026-09-01
+
+### Changed
+
+- Keep the shipped skill and public documents strictly computational in scope.
+- Replace physical-research terminology with target-site and computational-evaluation language.
+- Add a release test that prevents the removed terminology from returning to the shipped plugin.
+
 ## [0.3.4] - 2026-09-01
 
 ### Changed

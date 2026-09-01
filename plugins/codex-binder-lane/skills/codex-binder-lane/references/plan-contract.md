@@ -8,7 +8,7 @@ The plan must record:
 
 - `campaign_id` and `mode`: `plan`, `dry-run`, or `execute`;
 - purpose, intended use, safety assessment, commercial posture, and private-data status;
-- target identity, construct, source, chain mapping, confidentiality, and site/hotspot residues with numbering scheme and evidence;
+- target identity, construct, source, chain mapping, confidentiality, and target-site residues with numbering scheme and evidence;
 - binder modality, length range, desired delivered count, and forbidden or fixed sequence features;
 - method posture: `reproduce`, `approximate-reproduction`, `deliberate-swap`, or `best-available`, plus any reference stack and declared substitutions;
 - execution scope (`full-campaign`, `custom-campaign`, `technical-canary`, or `deposited-complex-evaluation`), posture, and selected provider/tool capability for each stage;
@@ -43,7 +43,7 @@ For any named reference stack, `method.reference_stack` must identify a stable p
 
 ## Metric semantics
 
-The primary metric controls promotion. It must not be a vague composite such as “best binder.” Record its source, direction, aggregation across seeds/predictors, target-specific gate or calibration plan, and tie-breaker. Common supporting metrics include interface confidence, ipSAE, interface PAE, binder/complex confidence, self-consistency RMSD, hotspot-contact fraction, clashes, novelty, solubility, aggregation risk, and sequence diversity.
+The primary metric controls promotion. It must not be a vague composite such as “best binder.” Record its source, direction, aggregation across seeds/predictors, target-specific gate or calibration plan, and tie-breaker. Common supporting metrics include interface confidence, ipSAE, interface PAE, binder/complex confidence, self-consistency RMSD, target-site-contact fraction, clashes, novelty, solubility, aggregation risk, and sequence diversity.
 
 Do not optimize a metric produced only by the generator and call that independent validation. Do not use ligand-affinity outputs to rank protein-protein binders unless the tool explicitly defines and validates that use.
 

@@ -18,7 +18,7 @@ Apply the retry and fanout budget in the plan. A bounded retry for a diagnosed t
 
 ## Wave 2: calibrated pilot
 
-Run positive and negative controls through the same preparation, predictor, and scoring path as candidates. Verify target numbering and hotspot contacts from coordinates. Use an initial funnel small enough that failed handoffs or unqualified metrics do not multiply into expensive cofold calls.
+Run positive and negative controls through the same preparation, predictor, and scoring path as candidates. Verify target numbering and target-site contacts from coordinates. Use an initial funnel small enough that failed handoffs or unqualified metrics do not multiply into expensive cofold calls.
 
 If controls do not separate, do not rank candidates on that metric. Repair conditioning, predictor inputs, or calibration; otherwise publish an unranked pilot.
 

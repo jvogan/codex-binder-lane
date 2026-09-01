@@ -35,7 +35,7 @@ Use Binder Lane when Codex must coordinate several binder-design steps or compar
 Install the current stable release from its exact tag:
 
 ```bash
-codex plugin marketplace add jvogan/codex-binder-lane --ref v0.3.4
+codex plugin marketplace add jvogan/codex-binder-lane --ref v0.3.5
 codex plugin add codex-binder-lane@codex-binder-lane
 ```
 
@@ -238,7 +238,7 @@ python3 -m compileall -q scripts tests plugins/codex-binder-lane
 
 `public-export-receipt.json` records the classification, byte count, source path, and SHA-256 of each published file. The bundled verifier checks receipt consistency, the exact release file set, the plugin manifest, and the marketplace entry. It is not an independent provenance attestation: release maintainers regenerate the allowlisted tree from the declared source revision, compare it byte-for-byte, and retain that evidence before publication.
 
-See the [0.3.4 release notes](docs/release-notes-0.3.4.md) for the exact release boundary and measured checks.
+See the [0.3.5 release notes](docs/release-notes-0.3.5.md) for the exact release boundary and measured checks.
 
 ## License
 

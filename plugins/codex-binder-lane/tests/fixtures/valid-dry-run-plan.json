@@ -76,7 +76,7 @@
     "target_threshold": null,
     "calibration_status": "missing",
     "ranking_status": "unranked",
-    "secondary_metrics": ["binder_plddt", "hotspot_contact_fraction"],
+    "secondary_metrics": ["binder_plddt", "target_site_contact_fraction"],
     "diversity_constraints": ["maximum one candidate per identical sequence"],
     "controls": {
       "positive": [],

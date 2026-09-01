@@ -191,8 +191,8 @@ class DeliveryValidationTests(unittest.TestCase):
         plan = self.write(root, "plan/codex-binder-plan.json", plan_raw)
         site_metrics = [
             {
-                "metric_id": "hotspot-contact-fraction",
-                "name": "Hotspot contact fraction",
+                "metric_id": "target-site-contact-fraction",
+                "name": "Target-site contact fraction",
                 "value": 0.75,
                 "unit": "fraction",
                 "state": "measured",
@@ -203,8 +203,8 @@ class DeliveryValidationTests(unittest.TestCase):
         metrics_raw = (
             '{"schema_version":"codex-binder-site-metrics/v1",'
             '"candidate_id":"CAND-001","render_id":"cand-001-fast",'
-            '"metrics":[{"metric_id":"hotspot-contact-fraction",'
-            '"name":"Hotspot contact fraction","value":0.75,"unit":"fraction",'
+            '"metrics":[{"metric_id":"target-site-contact-fraction",'
+            '"name":"Target-site contact fraction","value":0.75,"unit":"fraction",'
             '"state":"measured","source":"FAL Fast","scope":"target-site"}]}\n'
         ).encode()
         metrics = self.write(root, "metrics/CAND-001-fast.json", metrics_raw)
@@ -245,7 +245,7 @@ class DeliveryValidationTests(unittest.TestCase):
   <img data-structure-render="cand-001-fast" data-target-chains="T" data-binder-chains="B" data-target-site="T:10,T:12" data-site-highlighted="true" data-background="white" src="media/CAND-001-fast.svg" alt="CAND-001 bound to TARGET-1 at site T:10,T:12">
   <figcaption data-structure-caption="cand-001-fast">CAND-001 binder on TARGET-1 at locked site T:10 and T:12.</figcaption>
   <a data-structure-download="cand-001-fast" href="../structures/CAND-001-fast.cif">mmCIF<{slash}a>
-  <dl data-site-metrics="cand-001-fast"><dt>hotspot-contact-fraction<{slash}dt><dd>0.75<{slash}dd><{slash}dl>
+  <dl data-site-metrics="cand-001-fast"><dt>target-site-contact-fraction<{slash}dt><dd>0.75<{slash}dd><{slash}dl>
 <{slash}section>
 <{slash}body><{slash}html>\n""".encode()
         report = self.write(root, "report/index.html", html_raw)

@@ -9,7 +9,7 @@ Use these when they are visible and callable in the current task:
 | Review need | Preferred capability | Minimum portable fallback |
 | --- | --- | --- |
 | Target construct, chains, site, and residue numbering | Molecular Structure Viewer (`structure-viewer:structure-viewer`) | PDB or mmCIF, residue map, site table, and source hash |
-| Candidate complex, hotspot contacts, interface geometry, clashes, and confidence context | Molecular Structure Viewer (`structure-viewer:structure-viewer`) | Candidate PDB/mmCIF, metric table, contact table, provenance, and a readable report |
+| Candidate complex, target-site contacts, interface geometry, clashes, and confidence context | Molecular Structure Viewer (`structure-viewer:structure-viewer`) | Candidate PDB/mmCIF, metric table, contact table, provenance, and a readable report |
 | Target, binder, and finalist sequences | Biological Sequence & Alignment Viewer (`sequence-viewer:biological-sequence-viewer`) | FASTA plus candidate table and sequence hashes |
 | Alignment, diversity, annotations, constraints, and motif review | Biological Sequence & Alignment Viewer (`sequence-viewer:biological-sequence-viewer`) | FASTA/A3M or aligned FASTA, annotation table, diversity summary, and report |
 
@@ -45,14 +45,14 @@ For the target and each promoted finalist, preserve:
 - campaign and candidate ID;
 - target and binder chain IDs;
 - author numbering to campaign numbering map;
-- site/hotspot residues and their evidence source;
+- target-site residues and their evidence source;
 - coordinate-file hash and predictor/model identity;
 - prediction seed or ensemble membership;
 - interface metrics with their exact source;
 - missing measurements as null, not zero;
 - failure or exclusion reason.
 
-For every candidate in the locked structure scope, the first report panel shows the binder on the complete target with the requested site highlighted and labeled on a white background. Give the binder a distinct, stable color and keep target, binder, and site colors stable across candidates. Put site-aware metrics beside the panel and link the matching coordinates. Add a site-facing close-up and a contacted/missed/off-site contact panel when those views clarify the result. Inspect interface placement, hotspot recovery, obvious clashes, termini, unsupported loops, and confidence or uncertainty in context. If a render or viewer session is exported, keep it linked to the coordinate hash; never let a screenshot become the only retained evidence.
+For every candidate in the locked structure scope, the first report panel shows the binder on the complete target with the requested site highlighted and labeled on a white background. Give the binder a distinct, stable color and keep target, binder, and site colors stable across candidates. Put site-aware metrics beside the panel and link the matching coordinates. Add a site-facing close-up and a contacted/missed/off-site contact panel when those views clarify the result. Inspect interface placement, target-site recovery, obvious clashes, termini, unsupported loops, and confidence or uncertainty in context. If a render or viewer session is exported, keep it linked to the coordinate hash; never let a screenshot become the only retained evidence.
 
 ## Sequence review packet
 
@@ -61,7 +61,7 @@ For target, controls, and candidates, preserve:
 - stable record and candidate IDs;
 - raw and aligned sequences;
 - chain/entity role;
-- designed, fixed, forbidden, or hotspot-contact annotations;
+- designed, fixed, forbidden, or target-site-contact annotations;
 - generator/designer and round lineage;
 - sequence hash;
 - diversity cluster or nearest-neighbor context when computed;
