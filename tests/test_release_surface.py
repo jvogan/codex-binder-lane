@@ -25,7 +25,7 @@ class ReleaseSurfaceTests(unittest.TestCase):
         name, version = MODULE.verify_metadata(plugin, marketplace)
         self.assertGreater(count, 40)
         self.assertEqual(name, "codex-binder-lane")
-        self.assertEqual(version, "0.3.1")
+        self.assertEqual(version, "0.3.2")
 
     def test_plugin_manifest_default_prompts_fit_codex_limit(self) -> None:
         _, plugin, _ = MODULE.verify_receipt(ROOT)
@@ -64,6 +64,7 @@ class ReleaseSurfaceTests(unittest.TestCase):
             "docs/release-notes-0.3.0-rc.1.md",
             "docs/release-notes-0.3.0.md",
             "docs/release-notes-0.3.1.md",
+            "docs/release-notes-0.3.2.md",
             "public-export-receipt.json",
             "scripts/verify_public_export.py",
         }
@@ -95,7 +96,8 @@ class ReleaseSurfaceTests(unittest.TestCase):
         ):
             self.assertIn(phrase, description.group(1))
 
-        self.assertIn(f"short-description: {public_short_description}", frontmatter)
+        self.assertNotIn("metadata:", frontmatter)
+        self.assertNotIn("short-description:", frontmatter)
         self.assertIn(f'short_description: "{public_short_description}"', config)
         self.assertEqual(
             plugin["interface"]["shortDescription"], public_short_description

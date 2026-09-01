@@ -4,6 +4,12 @@ This file records user-visible Codex Binder Lane changes.
 
 ## [Unreleased]
 
+## [0.3.2] - 2026-09-01
+
+### Fixed
+
+- Remove the unsupported `metadata` interface block from `SKILL.md`; all supported skill interface settings now live only under `interface` in `agents/openai.yaml`.
+
 ## [0.3.1] - 2026-09-01
 
 ### Changed

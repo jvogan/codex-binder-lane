@@ -81,7 +81,7 @@
       }
     ]
   },
-  "release_notes": "Codex Binder Lane 0.3.1 is a submission-metadata update to the skills-only control and evidence workflow for protein-binder campaigns. It packages the required plugin manifest at the archive root and uses portal-compliant, plain-English listing metadata: a subtitle of 30 characters or fewer and three starter prompts of 128 characters or fewer. The scientific workflow and evidence boundaries are unchanged from 0.3.0.",
+  "release_notes": "Codex Binder Lane 0.3.2 is a submission-compatibility update to the skills-only control and evidence workflow for protein-binder campaigns. The plugin manifest remains at the archive root, and supported skill interface settings now live only under interface in agents/openai.yaml. The portal-compliant subtitle and plain-English starter prompts are unchanged. The scientific workflow and evidence boundaries are unchanged from 0.3.0.",
   "portal_only_checks": [
     "Select the verified Jacob Vogan developer identity in the publishing organization.",
     "Confirm the submitter has Apps Management write permission in that organization.",

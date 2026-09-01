@@ -1,8 +1,6 @@
 ---
 name: codex-binder-lane
 description: Use this when a user wants to plan, compare, supervise, or validate an end-to-end or multi-stage protein-binder campaign for a chosen target site. Trigger for direct Binder Lane requests and indirect requests to coordinate generation, sequence design, structure prediction, scoring, optimization, cost, evidence, or final delivery across separately authorized tools. Do not use for a single structure or sequence lookup, an alignment, a general protein question, or an already-specified atomic design, prediction, scoring, or rendering call.
-metadata:
-  short-description: Plan protein binder campaigns
 ---
 
 # Codex Binder Lane
