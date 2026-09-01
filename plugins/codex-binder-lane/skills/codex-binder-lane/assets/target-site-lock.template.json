@@ -1,0 +1,33 @@
+{
+  "campaign_id": null,
+  "chains": [],
+  "claim_ceiling": "plan-only",
+  "confidentiality": "public",
+  "primary_input": {
+    "path": null,
+    "sha256": null,
+    "size_bytes": null
+  },
+  "residue_map": {
+    "path": "residue-map.template.csv",
+    "sha256": null,
+    "size_bytes": null
+  },
+  "schema_version": "codex-binder-target-site-lock/v1",
+  "site": {
+    "evidence": null,
+    "mode": null,
+    "numbering_scheme": null,
+    "residues": [],
+    "site_id": null
+  },
+  "source_lock": {
+    "input_sha256": null,
+    "input_size_bytes": null,
+    "source_id": null,
+    "source_sha256": null,
+    "source_size_bytes": null,
+    "source_version": null
+  },
+  "target_id": null
+}

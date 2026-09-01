@@ -1,0 +1,140 @@
+{
+  "schema_version": "codex-binder-lane/v1",
+  "campaign_id": null,
+  "mode": "plan",
+  "purpose": {
+    "research_aim": null,
+    "intended_use": null,
+    "commercial_posture": "unspecified",
+    "safety_assessment": null
+  },
+  "target": {
+    "identifier": null,
+    "construct": null,
+    "source": null,
+    "structure_or_sequence": null,
+    "target_lock": {
+      "path": null,
+      "sha256": null,
+      "size_bytes": null
+    },
+    "chains": [],
+    "confidentiality": "public",
+    "source_lock": {
+      "source_id": null,
+      "source_version": null,
+      "source_sha256": null,
+      "input_sha256": null
+    },
+    "chain_mapping": [],
+    "residue_map": {
+      "artifact": null,
+      "sha256": null
+    },
+    "site": {
+      "mode": null,
+      "residues": [],
+      "numbering_scheme": null,
+      "evidence": null
+    }
+  },
+  "binder": {
+    "modality": "miniprotein",
+    "length_range": [50, 100],
+    "requested_delivered_count": 10,
+    "constraints": []
+  },
+  "method": {
+    "posture": "best-available",
+    "reference_stack": null,
+    "declared_swaps": []
+  },
+  "execution": {
+    "scope": null,
+    "posture": null,
+    "stages": [],
+    "fallbacks": [],
+    "artifact_budget": {
+      "max_output_files_per_overlay": 256,
+      "max_output_bytes_per_overlay": 671088640,
+      "max_output_bytes_per_artifact": 536870912
+    }
+  },
+  "budget": {
+    "maximum_spend_usd": null,
+    "maximum_wall_clock_hours": null,
+    "estimate_usd": null,
+    "estimate_status": "unknown",
+    "unpriced_work": []
+  },
+  "authorization": {
+    "paid_compute_authorized": false,
+    "private_data_authorized": false,
+    "restricted_license_authorized": false
+  },
+  "search": {
+    "initial_candidates": null,
+    "shortlist_for_expensive_validation": null,
+    "maximum_rounds": 0,
+    "parents_per_round": 0,
+    "variants_per_parent": 0,
+    "mutating_operator": null,
+    "stop_conditions": [],
+    "convergence": {
+      "minimum_improvement_delta": null,
+      "consecutive_rounds": null
+    },
+    "evaluation_fanout": {
+      "candidate_prediction_seeds": null,
+      "control_evaluations": null,
+      "final_rescore_candidates": null,
+      "final_rescore_seeds": null,
+      "maximum_expensive_evaluations": null
+    }
+  },
+  "objective": {
+    "primary_metric": null,
+    "direction": null,
+    "aggregation": null,
+    "target_threshold": null,
+    "calibration_status": "missing",
+    "ranking_status": "unranked",
+    "secondary_metrics": [],
+    "diversity_constraints": [],
+    "controls": {
+      "positive": [],
+      "negative": []
+    },
+    "calibration_evidence": {
+      "target_input_sha256": null,
+      "pipeline_sha256": null,
+      "positive_control_results_sha256": null,
+      "negative_control_results_sha256": null,
+      "separation_passed": false
+    }
+  },
+  "evidence": {
+    "independent_predictor_required": true,
+    "expected_artifacts": [],
+    "presentation": {
+      "structure_review": "required",
+      "sequence_review": "required",
+      "html_report": "required",
+      "sequence_visibility": "required",
+      "structure_visuals": "required",
+      "video": "not-requested",
+      "browser_verification": "required",
+      "sequence_scope": "all-generated",
+      "structure_scope": "all-predicted",
+      "portable_fallbacks": [
+        "PDB_or_mmCIF",
+        "FASTA_or_A3M",
+        "CSV_or_JSON_metrics",
+        "Markdown_report"
+      ]
+    },
+    "claim_ceiling": "plan-only",
+    "retention_destination": "local-only"
+  },
+  "blockers": []
+}

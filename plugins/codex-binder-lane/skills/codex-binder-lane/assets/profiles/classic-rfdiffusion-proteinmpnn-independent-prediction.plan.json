@@ -1,0 +1,80 @@
+{
+  "campaign_id": "classic-rfdiffusion-proteinmpnn-plan-template",
+  "claim_ceiling": "plan-only",
+  "data_classification": "public",
+  "mode": "plan",
+  "private_data_authorized": false,
+  "schema_version": "codex-binder-qualification-ledger/v1",
+  "stages": [
+    {
+      "adapter": {"id": null, "revision": null},
+      "artifact_validation": false,
+      "capability": {"id": "backbone-generation", "revision": null},
+      "egress_class": "unprobed",
+      "evidence_history": ["catalogued"],
+      "evidence_state": "catalogued",
+      "input_artifact_types": ["locked-target-structure", "site-map"],
+      "licenses": {
+        "code": {"commercial_allowed": null, "license_id": null, "redistribution_allowed": null, "source": null},
+        "service": {"commercial_allowed": null, "license_id": null, "redistribution_allowed": null, "source": null},
+        "weights": {"commercial_allowed": null, "license_id": null, "redistribution_allowed": null, "source": null}
+      },
+      "model": {"id": "RFdiffusion", "revision": null},
+      "output_artifact_types": ["candidate-backbone-coordinates"],
+      "price": {"confidence": "unknown", "estimate_usd": null, "source": null},
+      "provider": null,
+      "route_kind": "unbound",
+      "runtime": {"id": null, "revision": null},
+      "source": {"id": "RFdiffusion", "revision": null},
+      "stage_id": "backbone-generation",
+      "weights": {"id": null, "revision": null}
+    },
+    {
+      "adapter": {"id": null, "revision": null},
+      "artifact_validation": false,
+      "capability": {"id": "sequence-design", "revision": null},
+      "egress_class": "unprobed",
+      "evidence_history": ["catalogued"],
+      "evidence_state": "catalogued",
+      "input_artifact_types": ["candidate-backbone-coordinates"],
+      "licenses": {
+        "code": {"commercial_allowed": null, "license_id": null, "redistribution_allowed": null, "source": null},
+        "service": {"commercial_allowed": null, "license_id": null, "redistribution_allowed": null, "source": null},
+        "weights": {"commercial_allowed": null, "license_id": null, "redistribution_allowed": null, "source": null}
+      },
+      "model": {"id": "ProteinMPNN", "revision": null},
+      "output_artifact_types": ["candidate-sequences", "candidate-lineage"],
+      "price": {"confidence": "unknown", "estimate_usd": null, "source": null},
+      "provider": null,
+      "route_kind": "unbound",
+      "runtime": {"id": null, "revision": null},
+      "source": {"id": "ProteinMPNN", "revision": null},
+      "stage_id": "sequence-design",
+      "weights": {"id": null, "revision": null}
+    },
+    {
+      "adapter": {"id": null, "revision": null},
+      "artifact_validation": false,
+      "capability": {"id": "independent-complex-prediction", "revision": null},
+      "egress_class": "unprobed",
+      "evidence_history": ["catalogued"],
+      "evidence_state": "catalogued",
+      "input_artifact_types": ["locked-target-structure", "candidate-sequences"],
+      "licenses": {
+        "code": {"commercial_allowed": null, "license_id": null, "redistribution_allowed": null, "source": null},
+        "service": {"commercial_allowed": null, "license_id": null, "redistribution_allowed": null, "source": null},
+        "weights": {"commercial_allowed": null, "license_id": null, "redistribution_allowed": null, "source": null}
+      },
+      "model": {"id": "independent-predictor-unselected", "revision": null},
+      "output_artifact_types": ["complex-coordinates", "interface-metrics"],
+      "price": {"confidence": "unknown", "estimate_usd": null, "source": null},
+      "provider": null,
+      "route_kind": "unbound",
+      "runtime": {"id": null, "revision": null},
+      "source": {"id": null, "revision": null},
+      "stage_id": "independent-prediction",
+      "weights": {"id": null, "revision": null}
+    }
+  ],
+  "unpriced_work": ["No runtime, provider, price, or model-weight revision has been bound."]
+}

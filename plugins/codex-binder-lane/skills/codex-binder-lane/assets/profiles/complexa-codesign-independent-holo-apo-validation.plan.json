@@ -1,0 +1,57 @@
+{
+  "campaign_id": "complexa-codesign-holo-apo-plan-template",
+  "claim_ceiling": "plan-only",
+  "data_classification": "public",
+  "mode": "plan",
+  "private_data_authorized": false,
+  "schema_version": "codex-binder-qualification-ledger/v1",
+  "stages": [
+    {
+      "adapter": {"id": null, "revision": null},
+      "artifact_validation": false,
+      "capability": {"id": "sequence-structure-codesign", "revision": null},
+      "egress_class": "unprobed",
+      "evidence_history": ["catalogued"],
+      "evidence_state": "catalogued",
+      "input_artifact_types": ["locked-target-structure", "site-map"],
+      "licenses": {
+        "code": {"commercial_allowed": null, "license_id": null, "redistribution_allowed": null, "source": null},
+        "service": {"commercial_allowed": null, "license_id": null, "redistribution_allowed": null, "source": null},
+        "weights": {"commercial_allowed": null, "license_id": null, "redistribution_allowed": null, "source": null}
+      },
+      "model": {"id": "Complexa", "revision": null},
+      "output_artifact_types": ["candidate-sequences", "candidate-complexes", "candidate-lineage"],
+      "price": {"confidence": "unknown", "estimate_usd": null, "source": null},
+      "provider": null,
+      "route_kind": "unbound",
+      "runtime": {"id": null, "revision": null},
+      "source": {"id": "Proteina-Complexa", "revision": null},
+      "stage_id": "codesign",
+      "weights": {"id": null, "revision": null}
+    },
+    {
+      "adapter": {"id": null, "revision": null},
+      "artifact_validation": false,
+      "capability": {"id": "independent-holo-apo-validation", "revision": null},
+      "egress_class": "unprobed",
+      "evidence_history": ["catalogued"],
+      "evidence_state": "catalogued",
+      "input_artifact_types": ["locked-target-structure", "candidate-sequences", "candidate-complexes"],
+      "licenses": {
+        "code": {"commercial_allowed": null, "license_id": null, "redistribution_allowed": null, "source": null},
+        "service": {"commercial_allowed": null, "license_id": null, "redistribution_allowed": null, "source": null},
+        "weights": {"commercial_allowed": null, "license_id": null, "redistribution_allowed": null, "source": null}
+      },
+      "model": {"id": "independent-predictor-unselected", "revision": null},
+      "output_artifact_types": ["holo-complex-coordinates", "apo-structure", "validation-metrics"],
+      "price": {"confidence": "unknown", "estimate_usd": null, "source": null},
+      "provider": null,
+      "route_kind": "unbound",
+      "runtime": {"id": null, "revision": null},
+      "source": {"id": null, "revision": null},
+      "stage_id": "independent-holo-apo-validation",
+      "weights": {"id": null, "revision": null}
+    }
+  ],
+  "unpriced_work": ["No runtime, provider, price, or model-weight revision has been bound."]
+}

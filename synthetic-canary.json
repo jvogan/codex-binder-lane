@@ -1,0 +1,7 @@
+{
+  "biology_classification": "synthetic-non-biological",
+  "claim_ceiling": "transport-proven",
+  "contains_biological_data": false,
+  "purpose": "Software-only public export contract validation",
+  "schema_version": "codex-binder-public-synthetic-canary/v1"
+}

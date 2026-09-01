@@ -1,0 +1,93 @@
+{
+  "schema_version": "codex-binder-lane/v1",
+  "campaign_id": "public-example-dry-run",
+  "mode": "dry-run",
+  "purpose": {
+    "research_aim": "Plan a public-target minibinder campaign without dispatching compute.",
+    "intended_use": "Method development",
+    "commercial_posture": "non-commercial",
+    "safety_assessment": "Low-risk public protein target; computational planning only."
+  },
+  "target": {
+    "identifier": "example-target",
+    "construct": "extracellular-domain",
+    "source": "user-reviewed public structure",
+    "structure_or_sequence": "inputs/example-target.pdb",
+    "chains": ["A"],
+    "confidentiality": "public",
+    "site": {
+      "mode": "explicit-residues",
+      "residues": ["A:10", "A:12", "A:15"],
+      "numbering_scheme": "PDB author numbering",
+      "evidence": "User-reviewed reference interface"
+    }
+  },
+  "binder": {
+    "modality": "miniprotein",
+    "length_range": [50, 80],
+    "requested_delivered_count": 4,
+    "constraints": []
+  },
+  "method": {
+    "posture": "best-available",
+    "reference_stack": null,
+    "declared_swaps": []
+  },
+  "execution": {
+    "scope": "technical-canary",
+    "posture": "local",
+    "stages": [
+      {
+        "role": "target-preparation",
+        "capability": "fixture-target-preparer",
+        "route_kind": "local",
+        "provider": "local-workstation",
+        "paid": false,
+        "restricted_license": false
+      }
+    ],
+    "fallbacks": []
+  },
+  "budget": {
+    "maximum_spend_usd": null,
+    "maximum_wall_clock_hours": 1,
+    "estimate_usd": 0,
+    "estimate_status": "dry-run",
+    "unpriced_work": []
+  },
+  "authorization": {
+    "paid_compute_authorized": false,
+    "private_data_authorized": false,
+    "restricted_license_authorized": false
+  },
+  "search": {
+    "initial_candidates": 4,
+    "shortlist_for_expensive_validation": 2,
+    "maximum_rounds": 1,
+    "parents_per_round": 1,
+    "variants_per_parent": 2,
+    "mutating_operator": "sequence-resample",
+    "stop_conditions": ["round-cap", "zero-passers", "budget"]
+  },
+  "objective": {
+    "primary_metric": "ipsae_min",
+    "direction": "maximize",
+    "aggregation": "median across declared prediction seeds",
+    "target_threshold": null,
+    "calibration_status": "missing",
+    "ranking_status": "unranked",
+    "secondary_metrics": ["binder_plddt", "hotspot_contact_fraction"],
+    "diversity_constraints": ["maximum one candidate per identical sequence"],
+    "controls": {
+      "positive": [],
+      "negative": []
+    }
+  },
+  "evidence": {
+    "independent_predictor_required": true,
+    "expected_artifacts": ["dry-run stage graph"],
+    "claim_ceiling": "plan-only",
+    "retention_destination": "local-only"
+  },
+  "blockers": []
+}

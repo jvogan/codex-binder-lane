@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">How a verified binder result reaches the report</title>
+  <desc id="desc">Binder Lane compares each companion-tool result with the saved campaign plan, copies the declared result files into a separate verified package, and checks the selected sequences, structures, images, viewer states, video, and report before delivery.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0169cc"/>
+    </marker>
+    <style>
+      .title { font: 600 24px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0d0d0d; }
+      .subtitle { font: 400 15px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #52525b; }
+      .eyebrow { font: 600 12px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 1.1px; fill: #52525b; }
+      .heading { font: 600 17px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0d0d0d; }
+      .body { font: 400 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #3f3f46; }
+      .small { font: 400 13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #52525b; }
+      .mono { font: 400 13px ui-monospace, SFMono-Regular, Menlo, monospace; fill: #27272a; }
+      .connector { font: 600 11px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .7px; fill: #0169cc; }
+      .card { fill: #ffffff; stroke: #e4e4e7; stroke-width: 1; }
+      .pill { fill: #f4f4f5; stroke: #e4e4e7; stroke-width: 1; }
+      .rule { stroke: #e4e4e7; stroke-width: 1; }
+      .flow { fill: none; stroke: #0169cc; stroke-width: 2; marker-end: url(#arrow); }
+      .branch { fill: none; stroke: #a1a1aa; stroke-width: 1.5; }
+    </style>
+  </defs>
+
+  <rect x="8" y="8" width="1184" height="744" rx="18" fill="#f4f4f5"/>
+  <text x="48" y="48" class="title">How a verified binder result reaches the report</text>
+  <text x="48" y="75" class="subtitle">Each stage is checked against the saved target, site, tool choices, and input hashes before delivery.</text>
+
+  <rect x="48" y="108" width="490" height="150" rx="12" class="card"/>
+  <text x="70" y="135" class="eyebrow">1  SAVED CAMPAIGN PLAN</text>
+  <text x="70" y="164" class="heading">Plan, target, site, and tool choices</text>
+  <rect x="400" y="128" width="114" height="23" rx="7" class="pill"/>
+  <text x="412" y="144" class="mono">read-only</text>
+  <line x1="70" y1="180" x2="516" y2="180" class="rule"/>
+  <text x="70" y="206" class="body">Exact input files and approved stage routes</text>
+  <text x="70" y="229" class="mono">manifest.json  /  SHA-256  /  open decisions</text>
+
+  <rect x="662" y="108" width="490" height="150" rx="12" class="card"/>
+  <text x="684" y="135" class="eyebrow">2  COMPANION TOOL RESULT</text>
+  <text x="684" y="164" class="heading">Files, job record, cost, and status</text>
+  <rect x="1010" y="128" width="118" height="23" rx="7" class="pill"/>
+  <text x="1022" y="144" class="mono">one stage</text>
+  <line x1="684" y1="180" x2="1130" y2="180" class="rule"/>
+  <text x="684" y="206" class="body">Stage receipt, byte counts, and SHA-256</text>
+  <text x="684" y="229" class="mono">receipt.json  /  FASTA  /  PDB or mmCIF  /  metrics</text>
+
+  <path d="M293 258 V286 C293 306 320 315 350 315 H500 V324" class="flow"/>
+  <path d="M907 258 V286 C907 306 880 315 850 315 H700 V324" class="flow"/>
+  <text x="508" y="300" class="connector">CHECK AGAINST THE PLAN</text>
+
+  <rect x="300" y="324" width="600" height="146" rx="12" class="card"/>
+  <text x="322" y="351" class="eyebrow">3  VERIFIED STAGE PACKAGE</text>
+  <text x="322" y="380" class="heading">Result matched to the saved plan</text>
+  <rect x="724" y="344" width="152" height="23" rx="7" class="pill"/>
+  <text x="736" y="360" class="mono">hash-checked</text>
+  <line x1="322" y1="396" x2="878" y2="396" class="rule"/>
+  <text x="322" y="422" class="body">Checks campaign, stage, tool, route, input hashes, and output hashes</text>
+  <text x="322" y="445" class="body">Copies only declared files; the saved campaign plan stays unchanged</text>
+
+  <path d="M600 470 V505" class="flow"/>
+  <rect x="420" y="512" width="360" height="70" rx="12" class="card"/>
+  <text x="442" y="540" class="eyebrow">4  CHOOSE REPORT FILES</text>
+  <text x="442" y="562" class="mono">delivery-index.json lists every delivered file</text>
+
+  <path d="M600 582 V612" class="branch"/>
+  <path d="M144 612 H1056" class="branch"/>
+  <path d="M144 612 V632 M372 612 V632 M600 612 V632 M828 612 V632 M1056 612 V632" class="branch"/>
+
+  <rect x="48" y="632" width="192" height="88" rx="12" class="card"/>
+  <text x="66" y="658" class="eyebrow">01</text>
+  <text x="66" y="682" class="heading">Candidate sequences</text>
+  <text x="66" y="704" class="small">Visible + FASTA</text>
+
+  <rect x="276" y="632" width="192" height="88" rx="12" class="card"/>
+  <text x="294" y="658" class="eyebrow">02</text>
+  <text x="294" y="682" class="heading">Target–binder files</text>
+  <text x="294" y="704" class="small">PDB or mmCIF</text>
+
+  <rect x="504" y="632" width="192" height="88" rx="12" class="card"/>
+  <text x="522" y="658" class="eyebrow">03</text>
+  <text x="522" y="682" class="heading">Highlighted site views</text>
+  <text x="522" y="704" class="small">Binder on target</text>
+
+  <rect x="732" y="632" width="192" height="88" rx="12" class="card"/>
+  <text x="750" y="658" class="eyebrow">04</text>
+  <text x="750" y="682" class="heading">Metrics + viewer states</text>
+  <text x="750" y="704" class="small">Site + structure + sequence</text>
+
+  <rect x="960" y="632" width="192" height="88" rx="12" class="card"/>
+  <text x="978" y="658" class="eyebrow">05</text>
+  <text x="978" y="682" class="heading">Video + report</text>
+  <text x="978" y="704" class="small">Rendered + opened</text>
+</svg>

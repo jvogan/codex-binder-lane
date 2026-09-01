@@ -1,0 +1,60 @@
+{
+  "schema_version": "codex-binder-delivery-index/v2",
+  "campaign_id": null,
+  "requirements": {
+    "html_report": "required",
+    "sequence_visibility": "required",
+    "structure_visuals": "required",
+    "video": "not-requested"
+  },
+  "scientific_context": {
+    "target_id": null,
+    "target_chains": [],
+    "site_numbering": null,
+    "site_residues": [],
+    "target_coordinates": null,
+    "target_site_lock": null,
+    "plan": null
+  },
+  "candidate_scope": {
+    "sequence_kind": "all-generated",
+    "structure_kind": "all-predicted",
+    "sequence_candidate_ids": [],
+    "structure_candidate_ids": []
+  },
+  "report": {
+    "html": {
+      "path": null,
+      "sha256": null,
+      "size_bytes": null
+    },
+    "markdown": null,
+    "browser_verification": {
+      "status": "not-run",
+      "checked_sections": [],
+      "captures": []
+    }
+  },
+  "viewer_states": {
+    "structure": {
+      "packet": "not-emitted",
+      "runtime": "unprobed",
+      "invocation": "not-run",
+      "output_validation": "not-run",
+      "outputs": []
+    },
+    "sequence": {
+      "packet": "not-emitted",
+      "runtime": "unprobed",
+      "invocation": "not-run",
+      "output_validation": "not-run",
+      "outputs": []
+    }
+  },
+  "candidates": [],
+  "video": {
+    "storyboard": null,
+    "render": null
+  },
+  "delivery_files": []
+}

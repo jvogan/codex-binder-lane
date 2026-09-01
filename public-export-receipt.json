@@ -1,0 +1,551 @@
+{
+  "allowlist_sha256": "be9ce4e085d95187a6d1e4714b24ad78317386e60e3dafc86f6c03e16b2fa63c",
+  "files": [
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": ".agents/plugins/marketplace.json",
+      "sha256": "64202929309a9270dd9e2c3fb24b464bf98c796e85e2bdc196c040d646fed0db",
+      "size_bytes": 405,
+      "source": "public/.agents/plugins/marketplace.json"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": ".github/workflows/ci.yml",
+      "sha256": "2770af3482e306a9d5adacf763f2c02da8c109a51bc2fed8f89dad7c126a08ae",
+      "size_bytes": 945,
+      "source": "public/.github/workflows/ci.yml"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": ".gitignore",
+      "sha256": "61b3e18072aa34d77bac6651e6b7106770d895d05743d3693312403bd59811b0",
+      "size_bytes": 97,
+      "source": "public/.gitignore"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "CHANGELOG.md",
+      "sha256": "d45bd54bc29c52f970795fcbf6f326399b98b62dd73b341e7c2c119ab6ff15d8",
+      "size_bytes": 5492,
+      "source": "public/CHANGELOG.md"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "CONTRIBUTING.md",
+      "sha256": "b1215677c2e713d17b2ac7898b6e14d959d7c3245f8b9fbfb2be73f93424dc5a",
+      "size_bytes": 1534,
+      "source": "public/CONTRIBUTING.md"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "LICENSE",
+      "sha256": "75efa07c4d2afb14d8226cf00b7763dd2ec1c5585a9dfe919881a3a3fef2ddac",
+      "size_bytes": 11357,
+      "source": "LICENSE"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "README.md",
+      "sha256": "0a1b15475bbc638a1c3da00a4303b1a67b18ee5f8f68f74556e47d218d27aabf",
+      "size_bytes": 20154,
+      "source": "public/README.md"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "SECURITY.md",
+      "sha256": "af84333863565908a65cc722ad942f86df5235eacbff66e8e925bb49aa9181fd",
+      "size_bytes": 1397,
+      "source": "public/SECURITY.md"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "docs/media/binder-lane-architecture.svg",
+      "sha256": "526f800be4dce5459f008f2833f854f11da82eb7c6697cd92e253bda00ec1ab9",
+      "size_bytes": 5786,
+      "source": "docs/media/binder-lane-architecture.svg"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-media",
+      "path": "docs/media/binder-lane-banner.jpg",
+      "sha256": "fd0be20b81dcb9e9a7cdf4b3432040dbb3f08bf27ced6469720c9b936b0dfa8a",
+      "size_bytes": 277959,
+      "source": "docs/media/binder-lane-banner.jpg"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "docs/media/binder-lane-evidence-path.svg",
+      "sha256": "7c2ff7428ed6f17362fdb24063464116df6da04d66e03442ef59e6afbd2065ef",
+      "size_bytes": 5972,
+      "source": "docs/media/binder-lane-evidence-path.svg"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "docs/release-notes-0.2.0.md",
+      "sha256": "68cd054044825abbfca25fcb460854dfb75dcc849e726bfe091abce39dd1563c",
+      "size_bytes": 2476,
+      "source": "public/docs/release-notes-0.2.0.md"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "docs/release-notes-0.2.1.md",
+      "sha256": "8aa2e053547f90559a5268c30c6cf29420bc51da8945441f2f1a80adfde7ac3b",
+      "size_bytes": 3264,
+      "source": "public/docs/release-notes-0.2.1.md"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "docs/release-notes-0.3.0-rc.1.md",
+      "sha256": "762e181c01a7b523880a904bc9dc5da014b23f021c5f6c21d1bafac91a0378b0",
+      "size_bytes": 5418,
+      "source": "public/docs/release-notes-0.3.0-rc.1.md"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-metadata",
+      "path": "plugins/codex-binder-lane/.codex-plugin/plugin.json",
+      "sha256": "3f1efa6dacd0ab124d991954564bc3938bd83e076b9a35fcf3cc82fa6a545555",
+      "size_bytes": 1789,
+      "source": ".codex-plugin/plugin.json"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "plugins/codex-binder-lane/LICENSE",
+      "sha256": "75efa07c4d2afb14d8226cf00b7763dd2ec1c5585a9dfe919881a3a3fef2ddac",
+      "size_bytes": 11357,
+      "source": "LICENSE"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/SKILL.md",
+      "sha256": "b92c4a90454177e9a1b6f44e3fe09a5e3bbb79363dd0846b1074ab1a99be6cfe",
+      "size_bytes": 23549,
+      "source": "skills/codex-binder-lane/SKILL.md"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/agents/openai.yaml",
+      "sha256": "bd1d9919a4b999fd33ba787f6620070b563e594273f1cb98ea062d09b3866bc5",
+      "size_bytes": 866,
+      "source": "skills/codex-binder-lane/agents/openai.yaml"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-template",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/assets/codex-binder-plan.template.json",
+      "sha256": "84feaaa5e263f917c79064188308d8d5cb6f15eefe8b11b067082b4da9879670",
+      "size_bytes": 3523,
+      "source": "skills/codex-binder-lane/assets/codex-binder-plan.template.json"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-template",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/assets/delivery-index.template.json",
+      "sha256": "45984b726535893fd3f4ce61e8eaafd2187d62854e41a4ff76ae45908fcd97e4",
+      "size_bytes": 1347,
+      "source": "skills/codex-binder-lane/assets/delivery-index.template.json"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-template",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/assets/profiles/classic-rfdiffusion-proteinmpnn-independent-prediction.plan.json",
+      "sha256": "5e41168e1c2b988c3ce9051bb3d8a8905567b4185b8ff55942fa787009fede17",
+      "size_bytes": 3949,
+      "source": "skills/codex-binder-lane/assets/profiles/classic-rfdiffusion-proteinmpnn-independent-prediction.plan.json"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-template",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/assets/profiles/complexa-codesign-independent-holo-apo-validation.plan.json",
+      "sha256": "1be63b35911736e9a297439300103dc606433f2b1b8a3bde0d0b768cd5d46e39",
+      "size_bytes": 2855,
+      "source": "skills/codex-binder-lane/assets/profiles/complexa-codesign-independent-holo-apo-validation.plan.json"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-template",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/assets/residue-map.template.csv",
+      "sha256": "fbf29566a096ebfecbb4d411efa7f49230c294496b182ae7f0f92d8e426a7c88",
+      "size_bytes": 116,
+      "source": "skills/codex-binder-lane/assets/residue-map.template.csv"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-template",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/assets/target-site-lock.template.json",
+      "sha256": "99883018296ecc20349479e2c1ae410aa7e393bfc82186e3df2c47aec03d89d0",
+      "size_bytes": 691,
+      "source": "skills/codex-binder-lane/assets/target-site-lock.template.json"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/references/bundle-contracts.md",
+      "sha256": "a643ec06f1c2dc43d7e25c38d04cb972909b048867f70b4c162b3a582ecac6bb",
+      "size_bytes": 4839,
+      "source": "skills/codex-binder-lane/references/bundle-contracts.md"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/references/campaign-packet.md",
+      "sha256": "c26efd2814fa700199ddf0606b35f78ca6330f7e4ddb335511d353a31985708a",
+      "size_bytes": 4043,
+      "source": "skills/codex-binder-lane/references/campaign-packet.md"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/references/capability-routing.md",
+      "sha256": "435d7f2275890fcda48e1e8284075b27e679a8d493d0f3362324f7dd1ea04ed8",
+      "size_bytes": 9462,
+      "source": "skills/codex-binder-lane/references/capability-routing.md"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/references/companion-receipt-overlay.md",
+      "sha256": "474457bd05b2772ecd760076305ffb85605fc465bb97e3a4855bfeed52bf90e9",
+      "size_bytes": 9372,
+      "source": "skills/codex-binder-lane/references/companion-receipt-overlay.md"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/references/delivery-closeout.md",
+      "sha256": "100dfcc13767201b1c75c81fe9690f4b0cf1ded9e7a9d7b225b61d1b3505daf7",
+      "size_bytes": 7705,
+      "source": "skills/codex-binder-lane/references/delivery-closeout.md"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/references/execution-and-evidence.md",
+      "sha256": "614a721ded7a8258cba63028cae353e1debd9ab4d0413b8d45a7e4d7659c028b",
+      "size_bytes": 3651,
+      "source": "skills/codex-binder-lane/references/execution-and-evidence.md"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/references/plan-contract.md",
+      "sha256": "e6dac070ac2da390ffafb0a4d40b840bafffe1e92de1df6f06ee802edf43487b",
+      "size_bytes": 7945,
+      "source": "skills/codex-binder-lane/references/plan-contract.md"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/references/public-deposited-complex.md",
+      "sha256": "401431262b5102b796917c41b4e7e616809df9c7ba14f026850f7c4540356d56",
+      "size_bytes": 2458,
+      "source": "skills/codex-binder-lane/references/public-deposited-complex.md"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/references/pymol-snapshot.md",
+      "sha256": "2a0164e578ee9caba069a2ec5dd70b7bbc78ce315af9286f5b9c0a8f91c3402e",
+      "size_bytes": 1461,
+      "source": "skills/codex-binder-lane/references/pymol-snapshot.md"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/references/reporting-style.md",
+      "sha256": "d284e3e249bb93a5016874655c797898a95092195635d5419a1d239ffcf5be6b",
+      "size_bytes": 5272,
+      "source": "skills/codex-binder-lane/references/reporting-style.md"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/references/synthetic-canary.md",
+      "sha256": "bd61315c9f5669c097a816feb6f037bacf0077b68e2a9bd6195e20c3f472ebe1",
+      "size_bytes": 1851,
+      "source": "skills/codex-binder-lane/references/synthetic-canary.md"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/references/target-site-lock.md",
+      "sha256": "b5df442e0adae466de4efe7fe2a5f1b2f5dbf2ec47ca57a140a791e07089a4ac",
+      "size_bytes": 3697,
+      "source": "skills/codex-binder-lane/references/target-site-lock.md"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/references/visual-handoffs.md",
+      "sha256": "9274af531938c5d9c60bee1dd6c83b095b07e795db38aceffe5021cae000472f",
+      "size_bytes": 9821,
+      "source": "skills/codex-binder-lane/references/visual-handoffs.md"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/scripts/build_fixture_bundle.py",
+      "sha256": "3d6e8c61172fd0e41c82f4dec1ab62f339da4713d7e0a3dd9de87e094cbe7022",
+      "size_bytes": 36736,
+      "source": "skills/codex-binder-lane/scripts/build_fixture_bundle.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/scripts/campaign_overlay.py",
+      "sha256": "d51a4f721a54189ec50fde87785398f577bad1b18f1da966c03aacb631b3f4df",
+      "size_bytes": 42969,
+      "source": "skills/codex-binder-lane/scripts/campaign_overlay.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/scripts/campaign_packet.py",
+      "sha256": "0a6f813bf344b0d5cfe98183c76c84e7798746d700c03fee21e6f6b9c5d7456b",
+      "size_bytes": 42016,
+      "source": "skills/codex-binder-lane/scripts/campaign_packet.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/scripts/capability_inventory.py",
+      "sha256": "44eb81aa98d8b7305d9a23bafbb6135be3d8ecca5ea008948d5eeaff51322ce2",
+      "size_bytes": 15585,
+      "source": "skills/codex-binder-lane/scripts/capability_inventory.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/scripts/evaluate_deposited_complex.py",
+      "sha256": "d49973decc04bef7371555a117eb2e5d79f9406267e008af1630af53a6579728",
+      "size_bytes": 14439,
+      "source": "skills/codex-binder-lane/scripts/evaluate_deposited_complex.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/scripts/init_campaign.py",
+      "sha256": "bb24933e0a2c6f5da2fc3521a6843a7703dee51c28ed8206fbf3419b3923de15",
+      "size_bytes": 10221,
+      "source": "skills/codex-binder-lane/scripts/init_campaign.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/scripts/normalize_biosymphony_chai_receipt.py",
+      "sha256": "85182a5bdba7c45588db3fe9fc3731c958ad50052a0ec6c3111dc90190968851",
+      "size_bytes": 22995,
+      "source": "skills/codex-binder-lane/scripts/normalize_biosymphony_chai_receipt.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/scripts/render_locked_pymol_snapshot.py",
+      "sha256": "0d97fb89433c9a9adb653c7d234f90b27fc7954ad323323df6338685bf7bddb8",
+      "size_bytes": 11307,
+      "source": "skills/codex-binder-lane/scripts/render_locked_pymol_snapshot.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/scripts/strict_json.py",
+      "sha256": "c76cb202519bf309b153b94accb30e20a62a2547c5815b2d957c647f30fe77e8",
+      "size_bytes": 1517,
+      "source": "skills/codex-binder-lane/scripts/strict_json.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/scripts/validate_bundle.py",
+      "sha256": "7702036f4bd2c15709fae932251beb5d5363b70ceb6aeb8d666db696db26cc75",
+      "size_bytes": 48962,
+      "source": "skills/codex-binder-lane/scripts/validate_bundle.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/scripts/validate_delivery.py",
+      "sha256": "cc471be45e39f5d12fece985608357854d2929731007c22a6816cd0d52930168",
+      "size_bytes": 72127,
+      "source": "skills/codex-binder-lane/scripts/validate_delivery.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/scripts/validate_plan.py",
+      "sha256": "063f9577d930c95d43b59d85a17cf3ba6eb5742423c60a4b4a79f4a960f6ef77",
+      "size_bytes": 43076,
+      "source": "skills/codex-binder-lane/scripts/validate_plan.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/scripts/validate_qualification.py",
+      "sha256": "dff9af8b776eee2ed4325603ea532da657b491aa091338f48f77901673dba236",
+      "size_bytes": 18525,
+      "source": "skills/codex-binder-lane/scripts/validate_qualification.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/scripts/validate_target_site.py",
+      "sha256": "5bf399c1a1312ddb496726de60a38ce14045dc0a302e578b682cdebf433d4a61",
+      "size_bytes": 32479,
+      "source": "skills/codex-binder-lane/scripts/validate_target_site.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-template",
+      "path": "plugins/codex-binder-lane/tests/fixtures/valid-dry-run-plan.json",
+      "sha256": "aa4c137b3d1ea36c341fc05594708421e2aefc70d0b08f30c9cbb4d8df6f45f7",
+      "size_bytes": 2729,
+      "source": "tests/fixtures/valid-dry-run-plan.json"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/tests/test_biosymphony_chai_receipt_normalizer.py",
+      "sha256": "e0495796de139f63633589578c4817206db0f4734d4fb64bae4641e3aff29cc3",
+      "size_bytes": 16590,
+      "source": "tests/test_biosymphony_chai_receipt_normalizer.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/tests/test_campaign_overlay.py",
+      "sha256": "a511debf88f1fc91362369d3c3da94868a75b8a2324074113977efc0347f140b",
+      "size_bytes": 39284,
+      "source": "tests/test_campaign_overlay.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/tests/test_campaign_packet.py",
+      "sha256": "29a7208cae0a53d7f7194bf923431d08dc0cd4e87763e603c765e406ff995558",
+      "size_bytes": 22695,
+      "source": "tests/test_campaign_packet.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/tests/test_capability_inventory.py",
+      "sha256": "a63518ccd6a5284264d33628361f141e4d89e8c2a93a28ef2006ee5640743046",
+      "size_bytes": 9286,
+      "source": "tests/test_capability_inventory.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/tests/test_fixture_bundle.py",
+      "sha256": "e6656376b743de3d8a4b0b59641ac86c1670d3edde003f84d25e945ef6b8c85f",
+      "size_bytes": 13437,
+      "source": "tests/test_fixture_bundle.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/tests/test_init_campaign.py",
+      "sha256": "df4d1146830fe2bfb7980374ca4c91ca2eb476dd85bd6cce4501401471a60caf",
+      "size_bytes": 10576,
+      "source": "tests/test_init_campaign.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/tests/test_public_deposited_complex.py",
+      "sha256": "b63763042446d25d6ccf28a8bce64242f9b3e81e724f28373e034c9ded7d9a17",
+      "size_bytes": 3574,
+      "source": "tests/test_public_deposited_complex.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/tests/test_pymol_snapshot.py",
+      "sha256": "e736ee409325df2305e7fe581cec3f1b1447bf1ca54aa4e6b9c905cf24826815",
+      "size_bytes": 2955,
+      "source": "tests/test_pymol_snapshot.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/tests/test_qualification.py",
+      "sha256": "724ec7168f0fa6ec22c1fb02b8b1b9387d902fad9307a4e2ff0d0820f3a6fae8",
+      "size_bytes": 14013,
+      "source": "tests/test_qualification.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/tests/test_strict_json.py",
+      "sha256": "68d019bd961e17be52aefccce730cc987e98182e51eb4498dfebddc9b34d6f96",
+      "size_bytes": 1347,
+      "source": "tests/test_strict_json.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/tests/test_validate_delivery.py",
+      "sha256": "f6597d6b7bff1fd55c30f1acf935983d5b8d6ddb142c5316e893605b241fd49f",
+      "size_bytes": 41374,
+      "source": "tests/test_validate_delivery.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/tests/test_validate_plan.py",
+      "sha256": "56eff9913d379efac7a9d4f2a665268da7eb03144508c21eaf8fd859fafa0c41",
+      "size_bytes": 21281,
+      "source": "tests/test_validate_plan.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "plugins/codex-binder-lane/tests/test_validate_target_site.py",
+      "sha256": "05257142e28b2e15302ff221f0d142a5fdc9722c8be889b9f3c81034d46aed8a",
+      "size_bytes": 21111,
+      "source": "tests/test_validate_target_site.py"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "scripts/verify_public_export.py",
+      "sha256": "e5724db1ee38ccf5060165d3c58c3b544e7fb147f3bed856525e56b2a86bf3a4",
+      "size_bytes": 10939,
+      "source": "public/scripts/verify_public_export.py"
+    },
+    {
+      "biology_classification": "synthetic-non-biological",
+      "classification": "synthetic-canary-declaration",
+      "path": "synthetic-canary.json",
+      "sha256": "e032a8217d3715dc3efc37f0790df0e71b49dd3d7e80b1ddefe424df2fba73aa",
+      "size_bytes": 262,
+      "source": null
+    },
+    {
+      "biology_classification": "none",
+      "classification": "plugin-source",
+      "path": "tests/test_release_surface.py",
+      "sha256": "454da3363ec4e84cb83e079a77c678af857b83265c3409e002ef6a3df1c05010",
+      "size_bytes": 5620,
+      "source": "public/tests/test_release_surface.py"
+    }
+  ],
+  "schema_version": "codex-binder-public-export-receipt/v1",
+  "source_root": "."
+}

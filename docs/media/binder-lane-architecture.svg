@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Codex Binder Lane campaign architecture</title>
+  <desc id="desc">A five-step binder campaign. Codex records the target and site, selects tools for each stage, saves the plan, supervises authorized companion tools, verifies each returned result package, and delivers sequences, structures, metrics, and report files.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0169cc"/>
+    </marker>
+    <style>
+      .title { font: 600 24px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0d0d0d; }
+      .subtitle { font: 400 15px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #52525b; }
+      .eyebrow { font: 600 12px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 1.1px; fill: #52525b; }
+      .heading { font: 600 17px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0d0d0d; }
+      .body { font: 400 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #3f3f46; }
+      .mono { font: 400 13px ui-monospace, SFMono-Regular, Menlo, monospace; fill: #27272a; }
+      .connector { font: 600 11px ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .7px; fill: #0169cc; }
+      .card { fill: #ffffff; stroke: #e4e4e7; stroke-width: 1; }
+      .pill { fill: #f4f4f5; stroke: #e4e4e7; stroke-width: 1; }
+      .rule { stroke: #e4e4e7; stroke-width: 1; }
+      .flow { fill: none; stroke: #0169cc; stroke-width: 2; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect x="8" y="8" width="1184" height="634" rx="18" fill="#f4f4f5"/>
+  <text x="48" y="48" class="title">Plan, run, and verify a binder campaign</text>
+  <text x="48" y="75" class="subtitle">Lock the target and site, choose capable tools, then return sequences, site metrics, target–binder files, and clear site views.</text>
+
+  <rect x="48" y="96" width="1104" height="34" rx="9" class="pill"/>
+  <text x="64" y="118" class="mono">INPUT</text>
+  <text x="122" y="118" class="body">goal  /  target sequence or coordinates  /  binding site  /  data sensitivity  /  budget</text>
+
+  <rect x="48" y="154" width="340" height="210" rx="12" class="card"/>
+  <text x="70" y="181" class="eyebrow">01  PLAN AND CHECK</text>
+  <text x="70" y="210" class="heading">Codex + Binder Lane</text>
+  <line x1="70" y1="226" x2="366" y2="226" class="rule"/>
+  <text x="70" y="252" class="body">Set target, site, and numbering</text>
+  <text x="70" y="275" class="body">Choose tools for each stage</text>
+  <text x="70" y="298" class="body">Set controls, ranking rules, and stops</text>
+  <text x="70" y="321" class="body">Check cost, data route, and license</text>
+  <rect x="70" y="335" width="108" height="21" rx="6" class="pill"/>
+  <text x="81" y="350" class="mono">local files</text>
+
+  <rect x="430" y="154" width="300" height="210" rx="12" class="card"/>
+  <text x="452" y="181" class="eyebrow">02  SAVE THE PLAN</text>
+  <text x="452" y="210" class="heading">Campaign packet</text>
+  <line x1="452" y1="226" x2="708" y2="226" class="rule"/>
+  <text x="452" y="252" class="body">Exact plan and target files</text>
+  <text x="452" y="275" class="body">SHA-256 for every input</text>
+  <text x="452" y="298" class="body">Tool stages and open decisions</text>
+  <rect x="452" y="322" width="132" height="23" rx="7" class="pill"/>
+  <text x="464" y="338" class="mono">read-only copy</text>
+  <text x="452" y="358" class="connector">RECORDS THE PLAN</text>
+
+  <rect x="772" y="154" width="380" height="210" rx="12" class="card"/>
+  <text x="794" y="181" class="eyebrow">03  RUN COMPUTATION</text>
+  <text x="794" y="210" class="heading">Selected companion tools</text>
+  <line x1="794" y1="226" x2="1130" y2="226" class="rule"/>
+  <text x="794" y="252" class="body">Use compatible plugins, APIs, cloud, or local tools</text>
+  <text x="794" y="275" class="body">Generate, design, predict, score, or render</text>
+  <text x="794" y="298" class="body">Return files, job IDs, cost, and cleanup state</text>
+  <rect x="794" y="322" width="174" height="23" rx="7" class="pill"/>
+  <text x="806" y="338" class="mono">authorized route</text>
+
+  <path d="M388 259 H430" class="flow"/>
+  <text x="397" y="245" class="connector">SAVE</text>
+  <path d="M730 259 H772" class="flow"/>
+  <text x="738" y="245" class="connector">USE</text>
+
+  <rect x="210" y="442" width="360" height="146" rx="12" class="card"/>
+  <text x="232" y="469" class="eyebrow">04  VERIFY EACH STAGE</text>
+  <rect x="420" y="451" width="128" height="23" rx="7" class="pill"/>
+  <text x="431" y="467" class="mono">one per stage</text>
+  <text x="232" y="498" class="heading">Verified result package</text>
+  <line x1="232" y1="514" x2="548" y2="514" class="rule"/>
+  <text x="232" y="540" class="body">Match the result to its plan stage and inputs</text>
+  <text x="232" y="563" class="body">Copy declared outputs and verify every hash</text>
+
+  <rect x="630" y="442" width="360" height="146" rx="12" class="card"/>
+  <text x="652" y="469" class="eyebrow">05  DELIVER RESULTS</text>
+  <text x="652" y="498" class="heading">Binders on the requested target site</text>
+  <line x1="652" y1="514" x2="968" y2="514" class="rule"/>
+  <text x="652" y="540" class="body">Sequences + site metrics + target–binder files</text>
+  <text x="652" y="563" class="body">Highlighted-site images + requested video + report</text>
+
+  <path d="M962 364 V396 C962 416 940 418 918 418 H590 C568 418 548 426 548 442" class="flow"/>
+  <text x="765" y="408" class="connector">FILES + RECEIPT</text>
+  <path d="M570 515 H630" class="flow"/>
+</svg>
