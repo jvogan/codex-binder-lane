@@ -25,7 +25,7 @@ class ReleaseSurfaceTests(unittest.TestCase):
         name, version = MODULE.verify_metadata(plugin, marketplace)
         self.assertGreater(count, 40)
         self.assertEqual(name, "codex-binder-lane")
-        self.assertEqual(version, "0.3.0")
+        self.assertEqual(version, "0.3.1")
 
     def test_plugin_manifest_default_prompts_fit_codex_limit(self) -> None:
         _, plugin, _ = MODULE.verify_receipt(ROOT)
@@ -41,6 +41,11 @@ class ReleaseSurfaceTests(unittest.TestCase):
                 self.assertIsInstance(prompt, str)
                 assert isinstance(prompt, str)
                 self.assertLessEqual(len(prompt), 128)
+
+        short_description = interface.get("shortDescription")
+        self.assertIsInstance(short_description, str)
+        assert isinstance(short_description, str)
+        self.assertLessEqual(len(short_description), 30)
 
     def test_public_front_door_is_complete(self) -> None:
         required = {
@@ -58,6 +63,7 @@ class ReleaseSurfaceTests(unittest.TestCase):
             "docs/release-notes-0.2.1.md",
             "docs/release-notes-0.3.0-rc.1.md",
             "docs/release-notes-0.3.0.md",
+            "docs/release-notes-0.3.1.md",
             "public-export-receipt.json",
             "scripts/verify_public_export.py",
         }
@@ -70,9 +76,7 @@ class ReleaseSurfaceTests(unittest.TestCase):
         plugin = MODULE.read_json(
             ROOT / "plugins/codex-binder-lane/.codex-plugin/plugin.json"
         )
-        public_short_description = (
-            "Plan and design binders in Codex—within your comp bio budget"
-        )
+        public_short_description = "Plan protein binder campaigns"
 
         frontmatter = skill.split("---", 2)[1]
         self.assertRegex(frontmatter, r"(?m)^name: codex-binder-lane$")
@@ -114,18 +118,23 @@ class ReleaseSurfaceTests(unittest.TestCase):
             ROOT / "plugins/codex-binder-lane/.codex-plugin/plugin.json"
         )
         listing = submission["listing"]
-        self.assertEqual(submission["schema_version"], "codex-binder-openai-submission/v1")
+        self.assertEqual(
+            submission["schema_version"], "codex-binder-openai-submission/v1"
+        )
         self.assertEqual(listing["publisher"], "Jacob Vogan")
         self.assertEqual(listing["type"], "Skills only")
         self.assertEqual(listing["category"], "Scientific Research")
+        self.assertEqual(listing["subtitle"], plugin["interface"]["shortDescription"])
+        self.assertLessEqual(len(listing["subtitle"]), 30)
         self.assertEqual(
             listing["privacy_url"], plugin["interface"]["privacyPolicyURL"]
         )
-        self.assertEqual(
-            listing["terms_url"], plugin["interface"]["termsOfServiceURL"]
-        )
+        self.assertEqual(listing["terms_url"], plugin["interface"]["termsOfServiceURL"])
         self.assertEqual(
             submission["starter_prompts"], plugin["interface"]["defaultPrompt"]
+        )
+        self.assertTrue(
+            all(len(prompt) <= 128 for prompt in submission["starter_prompts"])
         )
 
         positives = submission["activation_tests"]["positive"]

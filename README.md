@@ -10,7 +10,7 @@ Selected companion tools generate, design, predict, score, rank, and render cand
 
 Use the plugin when a request spans several scientific roles, tools, providers, controls, or optimization rounds. You can specify the full toolchain or let Codex inspect current capabilities, choose compatible tools, write narrow reviewed adapters in the campaign workspace, and substitute another route when a preferred tool is unavailable. Codex asks before a choice changes scientific intent, authorized spend, data transfer, license acceptance, or another material external effect.
 
-The bundled scripts require Python 3.10 or later, use only the Python standard library as Python dependencies, and make no provider call during the documented local workflow. Delivery validation additionally requires local `ffmpeg` and `ffprobe` when JPEG, WebP, MP4, or WebM evidence is present. The `0.3.0` release passes all 177 shipped tests locally (8 public-surface and 169 plugin tests) on Python 3.10 through 3.14.
+The bundled scripts require Python 3.10 or later, use only the Python standard library as Python dependencies, and make no provider call during the documented local workflow. Delivery validation additionally requires local `ffmpeg` and `ffprobe` when JPEG, WebP, MP4, or WebM evidence is present. The `0.3.1` release passes all 177 shipped tests locally (8 public-surface and 169 plugin tests) on Python 3.10 through 3.14.
 
 ## What happens in a campaign
 
@@ -37,7 +37,7 @@ Binder Lane verifies each stage package separately. Before reporting a whole cam
 Install the current stable release from its exact tag:
 
 ```bash
-codex plugin marketplace add jvogan/codex-binder-lane --ref v0.3.0
+codex plugin marketplace add jvogan/codex-binder-lane --ref v0.3.1
 codex plugin add codex-binder-lane@codex-binder-lane
 ```
 
@@ -225,7 +225,7 @@ python3 -m compileall -q scripts tests plugins/codex-binder-lane
 
 `public-export-receipt.json` records the classification, byte count, source path, and SHA-256 of each published file. The bundled verifier checks receipt consistency, the exact release file set, the plugin manifest, and the marketplace entry. It is not an independent provenance attestation: release maintainers regenerate the allowlisted tree from the declared source revision, compare it byte-for-byte, and retain that evidence before publication.
 
-See the [0.3.0 release notes](docs/release-notes-0.3.0.md) for the exact release boundary and measured checks.
+See the [0.3.1 release notes](docs/release-notes-0.3.1.md) for the exact release boundary and measured checks.
 
 ## License
 

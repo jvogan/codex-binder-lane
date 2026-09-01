@@ -4,6 +4,14 @@ This file records user-visible Codex Binder Lane changes.
 
 ## [Unreleased]
 
+## [0.3.1] - 2026-09-01
+
+### Changed
+
+- Shorten the public subtitle to fit the submission portal's 30-character limit.
+- Replace the three starter prompts with plain-English, outcome-focused examples that each fit the portal's 128-character limit.
+- Publish the submission artifact as a full plugin ZIP with `.codex-plugin/plugin.json` at the archive root.
+
 ## [0.3.0] - 2026-09-01
 
 ### Added

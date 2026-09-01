@@ -1,6 +1,6 @@
 interface:
   display_name: "Codex Binder Lane"
-  short_description: "Plan and design binders in Codex—within your comp bio budget"
-  default_prompt: "Use $codex-binder-lane for a binder campaign on my target and requested site. Inspect the available capabilities, choose compatible generation, design, prediction, scoring, and rendering tools, and make reasonable technical choices within my stated scope. Ask before paid compute, protected-data transfer, restricted-license acceptance, or a material change to the scientific aim. After authorization, run the selected companions and deliver full binder sequences, site-aware metrics, target–binder coordinates, white-background views with the binder on the target and the exact site highlighted, an HTML report, and the raw files. Add a real video when I request one."
+  short_description: "Plan protein binder campaigns"
+  default_prompt: "Use $codex-binder-lane to plan a protein binder campaign for this target and site. Show me the tools and costs before paid work."
 policy:
   allow_implicit_invocation: true

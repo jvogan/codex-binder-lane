@@ -2,6 +2,7 @@
   "schema_version": "codex-binder-openai-submission/v1",
   "listing": {
     "plugin_name": "Codex Binder Lane",
+    "subtitle": "Plan protein binder campaigns",
     "publisher": "Jacob Vogan",
     "website_url": "https://github.com/jvogan/codex-binder-lane",
     "support_url": "https://github.com/jvogan/codex-binder-lane/issues",
@@ -12,9 +13,9 @@
     "availability": "All portal-supported countries and regions"
   },
   "starter_prompts": [
-    "Plan a binder campaign for this target site. Run only authorized routes; deliver sequences, metrics, structures, and views.",
-    "Audit my available binder-design routes, costs, evidence, and any unresolved authorization or integrity issues.",
-    "Validate this Binder Lane campaign and build the final report from its receipts."
+    "Plan a protein binder campaign for this target and binding site. Compare tools and costs before starting paid work.",
+    "Review my protein binder candidates and flag missing evidence, unreliable results, and work that should be repeated.",
+    "Create a final binder report with sequences, structures, binding-site results, images, costs, and remaining uncertainties."
   ],
   "activation_tests": {
     "positive": [
@@ -80,7 +81,7 @@
       }
     ]
   },
-  "release_notes": "Initial public submission of Codex Binder Lane 0.3.0, a skills-only control and evidence workflow for planning, supervising, and validating protein-binder campaigns across separately authorized tools. The bundle includes provider-free initialization and validation, capability auditing, immutable packet and receipt checks, deterministic synthetic canaries, delivery validation, public legal documents, and tested direct, indirect, and negative activation boundaries. It does not include an MCP server, hosted account, or bundled scientific model.",
+  "release_notes": "Codex Binder Lane 0.3.1 is a submission-metadata update to the skills-only control and evidence workflow for protein-binder campaigns. It packages the required plugin manifest at the archive root and uses portal-compliant, plain-English listing metadata: a subtitle of 30 characters or fewer and three starter prompts of 128 characters or fewer. The scientific workflow and evidence boundaries are unchanged from 0.3.0.",
   "portal_only_checks": [
     "Select the verified Jacob Vogan developer identity in the publishing organization.",
     "Confirm the submitter has Apps Management write permission in that organization.",

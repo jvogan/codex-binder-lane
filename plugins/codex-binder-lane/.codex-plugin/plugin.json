@@ -1,6 +1,6 @@
 {
   "name": "codex-binder-lane",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Plan and design binders in Codex: pick target sites, tools and comp bio budget, then get your structures and sequences.",
   "author": {
     "name": "Jacob Vogan",
@@ -18,7 +18,7 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Codex Binder Lane",
-    "shortDescription": "Plan and design binders in Codex—within your comp bio budget",
+    "shortDescription": "Plan protein binder campaigns",
     "longDescription": "Plan and design binders in Codex: pick target sites, tools and comp bio budget, then get your structures and sequences. Binder Lane is the provider-neutral control and evidence layer: it locks the exact target and requested site, supervises compatible companion tools, records authorization and costs, validates execution receipts, and delivers the underlying evidence files. Selected companion tools own provider execution.",
     "developerName": "Jacob Vogan",
     "category": "Scientific Research",
@@ -27,9 +27,9 @@
       "Write"
     ],
     "defaultPrompt": [
-      "Plan a binder campaign for this target site. Run only authorized routes; deliver sequences, metrics, structures, and views.",
-      "Audit my available binder-design routes, costs, evidence, and any unresolved authorization or integrity issues.",
-      "Validate this Binder Lane campaign and build the final report from its receipts."
+      "Plan a protein binder campaign for this target and binding site. Compare tools and costs before starting paid work.",
+      "Review my protein binder candidates and flag missing evidence, unreliable results, and work that should be repeated.",
+      "Create a final binder report with sequences, structures, binding-site results, images, costs, and remaining uncertainties."
     ],
     "websiteURL": "https://github.com/jvogan/codex-binder-lane",
     "privacyPolicyURL": "https://github.com/jvogan/codex-binder-lane/blob/main/PRIVACY.md",
