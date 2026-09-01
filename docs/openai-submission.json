@@ -2,7 +2,7 @@
   "schema_version": "codex-binder-openai-submission/v1",
   "listing": {
     "plugin_name": "Codex Binder Lane",
-    "subtitle": "Plan protein binder campaigns",
+    "subtitle": "Design binders within budget",
     "publisher": "Jacob Vogan",
     "website_url": "https://github.com/jvogan/codex-binder-lane",
     "support_url": "https://github.com/jvogan/codex-binder-lane/issues",
@@ -13,9 +13,9 @@
     "availability": "All portal-supported countries and regions"
   },
   "starter_prompts": [
-    "Plan a protein binder campaign for this target and binding site. Compare tools and costs before starting paid work.",
-    "Review my protein binder candidates and flag missing evidence, unreliable results, and work that should be repeated.",
-    "Create a final binder report with sequences, structures, binding-site results, images, costs, and remaining uncertainties."
+    "Design protein binders for this target and binding site. Compare available tools and costs before starting paid work.",
+    "Review these protein binder candidates. Check their sequences, structures, and scores, then flag weak or missing evidence.",
+    "Create a final report with each binder's sequence, predicted structure, binding-site results, images, costs, and open questions."
   ],
   "activation_tests": {
     "positive": [
@@ -81,7 +81,7 @@
       }
     ]
   },
-  "release_notes": "Codex Binder Lane 0.3.2 is a submission-compatibility update to the skills-only control and evidence workflow for protein-binder campaigns. The plugin manifest remains at the archive root, and supported skill interface settings now live only under interface in agents/openai.yaml. The portal-compliant subtitle and plain-English starter prompts are unchanged. The scientific workflow and evidence boundaries are unchanged from 0.3.0.",
+  "release_notes": "Codex Binder Lane 0.3.3 improves the public listing for clarity. It helps users design protein binders for a chosen target site, compare approved tools and costs, review candidate results, and organize sequences, predicted structures, scores, and images. It remains a skills-only plugin with no hosted account or bundled scientific model.",
   "portal_only_checks": [
     "Select the verified Jacob Vogan developer identity in the publishing organization.",
     "Confirm the submitter has Apps Management write permission in that organization.",

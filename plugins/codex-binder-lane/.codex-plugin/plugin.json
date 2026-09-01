@@ -1,7 +1,7 @@
 {
   "name": "codex-binder-lane",
-  "version": "0.3.2",
-  "description": "Plan and design binders in Codex: pick target sites, tools and comp bio budget, then get your structures and sequences.",
+  "version": "0.3.3",
+  "description": "Design protein binders for a chosen target site, compare approved tools and costs, and organize sequences, structures, scores, and images.",
   "author": {
     "name": "Jacob Vogan",
     "url": "https://github.com/jvogan"
@@ -18,8 +18,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Codex Binder Lane",
-    "shortDescription": "Plan protein binder campaigns",
-    "longDescription": "Plan and design binders in Codex: pick target sites, tools and comp bio budget, then get your structures and sequences. Binder Lane is the provider-neutral control and evidence layer: it locks the exact target and requested site, supervises compatible companion tools, records authorization and costs, validates execution receipts, and delivers the underlying evidence files. Selected companion tools own provider execution.",
+    "shortDescription": "Design binders within budget",
+    "longDescription": "Design protein binders for a specific target site while staying within your budget. Binder Lane coordinates the scientific tools you approve, checks each stage, and organizes candidate sequences, predicted structures, scores, and images. It asks before starting paid work or sharing private data.",
     "developerName": "Jacob Vogan",
     "category": "Scientific Research",
     "capabilities": [
@@ -27,9 +27,9 @@
       "Write"
     ],
     "defaultPrompt": [
-      "Plan a protein binder campaign for this target and binding site. Compare tools and costs before starting paid work.",
-      "Review my protein binder candidates and flag missing evidence, unreliable results, and work that should be repeated.",
-      "Create a final binder report with sequences, structures, binding-site results, images, costs, and remaining uncertainties."
+      "Design protein binders for this target and binding site. Compare available tools and costs before starting paid work.",
+      "Review these protein binder candidates. Check their sequences, structures, and scores, then flag weak or missing evidence.",
+      "Create a final report with each binder's sequence, predicted structure, binding-site results, images, costs, and open questions."
     ],
     "websiteURL": "https://github.com/jvogan/codex-binder-lane",
     "privacyPolicyURL": "https://github.com/jvogan/codex-binder-lane/blob/main/PRIVACY.md",

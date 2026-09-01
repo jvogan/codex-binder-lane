@@ -4,6 +4,13 @@ This file records user-visible Codex Binder Lane changes.
 
 ## [Unreleased]
 
+## [0.3.3] - 2026-09-01
+
+### Changed
+
+- Rewrite the public description, subtitle, and starter prompts around user outcomes: designing binders for a chosen site, comparing tools and costs, reviewing candidates, and organizing final results.
+- Remove internal implementation language such as execution receipts from the public listing copy.
+
 ## [0.3.2] - 2026-09-01
 
 ### Fixed

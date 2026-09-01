@@ -25,7 +25,7 @@ class ReleaseSurfaceTests(unittest.TestCase):
         name, version = MODULE.verify_metadata(plugin, marketplace)
         self.assertGreater(count, 40)
         self.assertEqual(name, "codex-binder-lane")
-        self.assertEqual(version, "0.3.2")
+        self.assertEqual(version, "0.3.3")
 
     def test_plugin_manifest_default_prompts_fit_codex_limit(self) -> None:
         _, plugin, _ = MODULE.verify_receipt(ROOT)
@@ -47,6 +47,31 @@ class ReleaseSurfaceTests(unittest.TestCase):
         assert isinstance(short_description, str)
         self.assertLessEqual(len(short_description), 30)
 
+        public_copy = " ".join(
+            [
+                plugin["description"],
+                short_description,
+                interface["longDescription"],
+                *prompts,
+            ]
+        ).lower()
+        for internal_term in (
+            "control and evidence layer",
+            "execution receipt",
+            "provider-neutral",
+            "claim ceiling",
+        ):
+            self.assertNotIn(internal_term, public_copy)
+        for user_benefit in (
+            "target site",
+            "cost",
+            "sequence",
+            "structure",
+            "score",
+            "image",
+        ):
+            self.assertIn(user_benefit, public_copy)
+
     def test_public_front_door_is_complete(self) -> None:
         required = {
             ".agents/plugins/marketplace.json",
@@ -65,6 +90,7 @@ class ReleaseSurfaceTests(unittest.TestCase):
             "docs/release-notes-0.3.0.md",
             "docs/release-notes-0.3.1.md",
             "docs/release-notes-0.3.2.md",
+            "docs/release-notes-0.3.3.md",
             "public-export-receipt.json",
             "scripts/verify_public_export.py",
         }
@@ -77,7 +103,7 @@ class ReleaseSurfaceTests(unittest.TestCase):
         plugin = MODULE.read_json(
             ROOT / "plugins/codex-binder-lane/.codex-plugin/plugin.json"
         )
-        public_short_description = "Plan protein binder campaigns"
+        public_short_description = "Design binders within budget"
 
         frontmatter = skill.split("---", 2)[1]
         self.assertRegex(frontmatter, r"(?m)^name: codex-binder-lane$")

@@ -1,6 +1,6 @@
 interface:
   display_name: "Codex Binder Lane"
-  short_description: "Plan protein binder campaigns"
-  default_prompt: "Use $codex-binder-lane to plan a protein binder campaign for this target and site. Show me the tools and costs before paid work."
+  short_description: "Design binders within budget"
+  default_prompt: "Use $codex-binder-lane to design binders for this target and site. Compare available tools and costs before paid work."
 policy:
   allow_implicit_invocation: true
