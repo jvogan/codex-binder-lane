@@ -2,35 +2,47 @@
 
 ![Codex Binder Lane banner](docs/media/binder-lane-banner.jpg)
 
-Plan and design binders in Codex: pick target sites, tools and comp bio budget, then get your structures and sequences.
+Design protein binders for a chosen target site without losing track of tools, costs, or results.
 
-Codex Binder Lane is a provider-neutral control and evidence layer for protein-binder campaigns in Codex. It locks the exact target, construct, chain, residue numbering, and site; selects and supervises compatible design and prediction tools; and keeps every decision, approval, cost, artifact, and result tied to one reviewable campaign.
+Binder Lane turns a binder-design goal into an organized Codex project. Give it a target sequence or structure and the site you care about. It compares compatible scientific tools, proposes a plan and budget, coordinates the tools you approve, and brings the results together for review.
 
-Selected companion tools generate, design, predict, score, rank, and render candidates. Binder Lane coordinates those tools and delivers every scoped candidate with its full amino-acid sequence, site-aware metrics, target–binder PDB or mmCIF coordinates, a clear view of the binder on the complete target with the requested site highlighted, and the underlying evidence files. It keeps transport integrity, prediction scores, and campaign conclusions as separate evidence classes.
+Use it to start a new design project, review existing candidates, or turn scattered outputs into a clear final report.
 
-Use the plugin when a request spans several scientific roles, tools, providers, controls, or optimization rounds. You can specify the full toolchain or let Codex inspect current capabilities, choose compatible tools, write narrow reviewed adapters in the campaign workspace, and substitute another route when a preferred tool is unavailable. Codex asks before a choice changes scientific intent, authorized spend, data transfer, license acceptance, or another material external effect.
+## What Binder Lane helps you do
 
-The bundled scripts require Python 3.10 or later, use only the Python standard library as Python dependencies, and make no provider call during the documented local workflow. Delivery validation additionally requires local `ffmpeg` and `ffprobe` when JPEG, WebP, MP4, or WebM evidence is present. The `0.3.3` release passes all 177 shipped tests locally (8 public-surface and 169 plugin tests) on Python 3.10 through 3.14.
+- **Design for the right site.** Keep the target, chain, residue numbering, and requested binding site consistent from the first plan through the final structures.
+- **Choose a sensible toolchain.** Compare available generation, sequence-design, structure-prediction, scoring, and visualization tools instead of stitching them together by hand.
+- **Stay in control of cost and data.** See the proposed tools and expected costs before paid work starts. Binder Lane asks before sharing private data or accepting a restricted license.
+- **Review every candidate in one place.** Bring together sequences, predicted complexes, binding-site results, images, costs, and open questions.
+- **Get a usable handoff.** Receive the raw FASTA and PDB/mmCIF files alongside a readable report, rather than a summary with no underlying files.
 
-## What happens in a campaign
+## How it works
+
+1. **Define the target.** Provide a sequence or structure and identify the desired binding site.
+2. **Review the plan.** Binder Lane compares the tools available in the current Codex task and proposes a workflow, budget, and stopping point.
+3. **Approve external work.** Nothing paid or private is sent elsewhere without your approval.
+4. **Inspect the results.** Binder Lane checks the returned files and organizes each candidate's sequence, structure, scores, and images into a final report.
 
 ![Codex locks the target and site, chooses compatible tools, runs and verifies the campaign, then delivers binder sequences, site metrics, target–binder structures, site-highlighted images, and requested video](docs/media/binder-lane-architecture.svg)
 
-Each completed stage gets its own verified result package. Binder Lane checks that package against the saved plan before its sequences, metrics, coordinates, views, and report enter the delivery:
+Binder Lane does not contain a scientific model or provider account. It coordinates compatible tools that are available in your Codex task, and you decide which external work may run.
 
-![Binder Lane checks each result against the saved plan and carries verified binder sequences, target–binder files, highlighted-site views, viewer states, and requested video into the final report](docs/media/binder-lane-evidence-path.svg)
+## What you receive
 
-## How execution works
-
-| Component | Responsibility |
+| Result | Why it matters |
 | --- | --- |
-| Binder Lane package | Initializes the workspace, validates the plan and target/site lock, records authorization and cost limits, verifies immutable packets, imports each stage result, and validates the final delivery. |
-| Selected computational companions | Run generation, sequence design, prediction, scoring, optimization, and rendering after authorization. Codex can compose callable skills, command-line tools, hosted APIs, cloud jobs, and reviewed workspace adapters. |
-| Schema-v1 base packet | Freezes the inputs and decisions at a `plan-only` ceiling. Authorized companions run the stages; their receipts and artifacts enter separate hash-bound result packages. |
+| Full binder sequences and FASTA files | Use candidates in downstream analysis without copying sequences out of prose. |
+| Predicted target–binder structures | Inspect each complex in PDB or mmCIF format. |
+| Binding-site scores and checks | See how each candidate relates to the site you requested. |
+| Site-highlighted images | Review the binder, complete target, and selected site together. |
+| Costs and unresolved questions | Know what ran, what remains uncertain, and what decision comes next. |
+| HTML report and raw files | Share a readable overview without losing the underlying data. |
 
-Use `full-campaign` for the complete default funnel. Use `custom-campaign` for a deliberate subset such as site discovery, a tool comparison, or a prediction-only rerun. A site-discovery campaign records its selected residues and evidence, then feeds a new locked generation plan. Technical canaries and deposited-complex evaluations retain their narrower scopes.
+## When to use it
 
-Binder Lane verifies each stage package separately. Before reporting a whole campaign as complete, reconcile the planned stages, sibling result packages, candidate lineage, cumulative cost, cleanup states, stop reason, and final delivery. The v2 presentation validator checks the delivered sequences, metrics, coordinates, visuals, media, and file inventory; it does not by itself prove that every planned computation ran.
+Use Binder Lane when the job spans multiple stages: choosing a target site, generating or reviewing candidates, predicting complexes, comparing scores, controlling spend, and preparing a final delivery.
+
+For a single structure lookup, sequence alignment, general protein question, or one already-specified model call, use the focused tool for that task instead.
 
 ## Install
 
@@ -43,7 +55,7 @@ codex plugin add codex-binder-lane@codex-binder-lane
 
 Start a new Codex task after installation so Codex loads the new skill version.
 
-Binder Lane itself needs only Codex and Python for planning, locking inputs, validating receipts, and building the delivery. It does not bundle model weights, provider accounts, or a fixed compute backend. For live generation, design, prediction, scoring, or rendering, select at least one compatible capability that is callable in the current task. That capability may come from a Codex or Rosalind companion plugin, a hosted API, a local command-line tool, a cloud job, or a reviewed workspace adapter. The Molecular Structure Viewer and Biological Sequence & Alignment Viewer add interactive review when available; portable FASTA, PDB/mmCIF, metrics, images, and reports remain the baseline output.
+Binder Lane itself needs only Codex and Python. To generate, predict, score, or render candidates, enable at least one compatible scientific tool in the same Codex task. That tool can be another plugin, a hosted service, a local command-line program, or a reviewed workspace integration. Structure and sequence viewers add interactive review when available; Binder Lane still preserves portable FASTA, PDB/mmCIF, metrics, images, and reports without them.
 
 To switch between pinned releases, remove the installed plugin and marketplace snapshot, then add the desired tag and reinstall:
 
@@ -58,36 +70,51 @@ Start another new task after reinstalling. To uninstall completely, run the firs
 
 ## Use with Rosalind Workbench
 
-Rosalind Workbench and Binder Lane are separate Codex plugins. Rosalind is a launcher and discovery surface for life-science capabilities; Binder Lane is the campaign control and evidence layer. Installing Binder Lane does not add a Binder Lane tile to Rosalind, and `rosalind.open` is not a binder-design execution API.
+Rosalind Workbench and Binder Lane are separate Codex plugins. Rosalind helps you discover life-science tools; Binder Lane turns selected tools into one coordinated binder-design project.
 
 For the combined workflow:
 
-1. Install Binder Lane and separately enable Rosalind plus the scientific companion and viewer plugins you want to use.
-2. Start a new Codex task and invoke `$codex-binder-lane` directly. Name preferred tools if you have them, or ask Codex to inspect the capabilities callable in that task.
-3. Let Binder Lane bind each selected companion to a campaign stage, retain its native outputs, and import a normalized receipt. Open hash-bound PDB/mmCIF and FASTA/A3M artifacts in the Molecular Structure Viewer and Biological Sequence & Alignment Viewer when they are callable.
+1. Install Binder Lane and separately enable Rosalind plus any scientific or viewer plugins you want to use.
+2. Start a new Codex task and invoke `$codex-binder-lane`. Name preferred tools, or ask Codex to compare what is available.
+3. Review the proposed plan and costs. After approval, Binder Lane coordinates the selected tools and organizes their sequences, structures, scores, and images.
 
-The portable campaign artifacts remain the source of truth, so the work stays reviewable when Rosalind or either viewer is unavailable. A visible Binder Lane entry inside Rosalind would require a separate addition to Rosalind's curated catalog.
+Installing Binder Lane does not add a Binder Lane tile inside Rosalind. Invoke Binder Lane directly in Codex.
 
 ## Start in Codex
 
-Invoke the skill explicitly or describe a multi-stage binder campaign; implicit invocation is enabled. A useful first prompt is:
+Invoke the skill directly or describe a multi-stage binder-design project. A useful first prompt is:
 
 ```text
-Use $codex-binder-lane for a binder campaign on target <ID and construct> at site
-<residues or interface>. My input is <PDB, mmCIF, FASTA, or sequence>, and the data
-are <public, private, or restricted>. Lock the target and site, choose compatible
-generation, design, prediction, scoring, and rendering tools, and return for every
-scoped candidate its full sequence, site-aware metrics, target–binder coordinates,
-and a white-background image with the binder on the target and the exact site
-highlighted. Include an HTML report, raw files, and a real video only if requested.
-Ask before paid compute or private-data transfer.
+Use $codex-binder-lane to design protein binders for this target and binding site.
+Compare the scientific tools available to me, estimate the cost, and show me the
+plan before starting paid work. Return the candidate sequences, predicted
+target–binder structures, binding-site results, images, and raw files in a clear
+final report. Ask before sharing private data.
 ```
 
-The first pass produces a local capability inventory, the material unresolved decisions, a campaign workspace, validation results, and explicit gates. After the user authorizes a selected companion, Codex runs that toolchain and imports its receipts and outputs. Tool installation alone does not authorize scientific compute.
+The first pass identifies the target details still needed, compares the tools available in the task, and proposes a plan. After you approve any paid or private-data work, Codex can run the selected tools and bring their outputs into the final report. Installing a tool does not by itself authorize a scientific run.
 
-For an external worked reference, the bundled capability-routing guide links Anthropic's [campaign overview](https://www.anthropic.com/research/Claude-accelerates-protein-design), [technical report](https://www-cdn.anthropic.com/30bf50e22a01388bb29bf077ee3f244531594b7a.pdf), [released campaign data](https://huggingface.co/datasets/Anthropic/claude-protein-binder-design), and [multi-target protocol prompt pinned at `d442eeb`](https://huggingface.co/datasets/Anthropic/claude-protein-binder-design/blob/d442eeb/prompts/prompts/multi_target_binder_design_prompt.md). A plan must declare whether it reproduces, approximates, or swaps that study and record every material difference. Binder Lane does not apply the study as a default workflow.
+For a published example, the bundled capability guide links Anthropic's [campaign overview](https://www.anthropic.com/research/Claude-accelerates-protein-design), [technical report](https://www-cdn.anthropic.com/30bf50e22a01388bb29bf077ee3f244531594b7a.pdf), [released campaign data](https://huggingface.co/datasets/Anthropic/claude-protein-binder-design), and [multi-target protocol prompt pinned at `d442eeb`](https://huggingface.co/datasets/Anthropic/claude-protein-binder-design/blob/d442eeb/prompts/prompts/multi_target_binder_design_prompt.md). Binder Lane uses that study only when you deliberately choose it as a reference.
 
-## Run the local workflow
+## Technical details for maintainers
+
+The sections below describe Binder Lane's local files, validation boundaries, and release checks. Users can install and use the plugin without running these commands.
+
+### Execution model
+
+| Component | Responsibility |
+| --- | --- |
+| Binder Lane package | Initializes the workspace, validates the plan and target/site lock, records authorization and cost limits, verifies immutable packets, imports each stage result, and validates the final delivery. |
+| Selected computational companions | Run generation, sequence design, prediction, scoring, optimization, and rendering after authorization. Codex can compose callable skills, command-line tools, hosted APIs, cloud jobs, and reviewed workspace adapters. |
+| Schema-v1 base packet | Freezes the inputs and decisions at a `plan-only` ceiling. Authorized companions run the stages; their receipts and artifacts enter separate hash-bound result packages. |
+
+Use `full-campaign` for the complete default funnel. Use `custom-campaign` for a deliberate subset such as site discovery, a tool comparison, or a prediction-only rerun. Technical canaries and deposited-complex evaluations retain their narrower scopes.
+
+Binder Lane verifies each stage package separately. Before reporting a whole campaign as complete, reconcile the planned stages, sibling result packages, candidate lineage, cumulative cost, cleanup states, stop reason, and final delivery. The presentation validator checks the delivered sequences, metrics, coordinates, visuals, media, and file inventory; it does not by itself prove that every planned computation ran.
+
+![Binder Lane checks each result against the saved plan and carries verified binder sequences, target–binder files, highlighted-site views, viewer states, and requested video into the final report](docs/media/binder-lane-evidence-path.svg)
+
+### Run the local workflow
 
 From the repository root, set `SKILL_DIR` and `ARTIFACT_ROOT`, then keep the shell there. This example keeps normalized target artifacts in the campaign workspace; choose another exact directory if needed. Every command below is local.
 
@@ -183,13 +210,13 @@ For a completed BioSymphony hosted-Chai result, `normalize_biosymphony_chai_rece
 
    This check requires full scoped sequences, site-aware metrics, raw FASTA and target–binder coordinate downloads, and a white-background image that declares the target chain, binder chain, and highlighted locked site. When video is requested, a real MP4/WebM must be embedded and browser-tested. It excludes dependency trees, tool caches, and vendored examples from the delivery index. The check proves that the report opens and contains the promised evidence; it does not judge candidate quality.
 
-## Viewer and renderer handoff
+### Viewer and renderer handoff
 
 When the plan requests interactive review and the viewers are callable, open the Molecular Structure Viewer and Biological Sequence & Alignment Viewer, reuse each `viewerSessionId` in the same Codex task, and save the final state. Structure selections use author numbering and assembly instance; sequence coordinates are 1-based. If a viewer is unavailable, retain the same portable FASTA/A3M, PDB/mmCIF, hashes, and inspection instructions so the result remains reviewable.
 
 PyMOL and ChimeraX are complementary renderer routes. They do not replace the portable scientific files or viewer-state record. The release includes a sealed 1ZVH PyMOL example; arbitrary targets use the typed renderer request/receipt contract through any compatible reviewed adapter. The Molecular Structure Viewer, discoverable through Rosalind when installed and callable, remains the preferred interactive Codex path when it can produce the requested scene.
 
-## What has been tested end to end
+### What has been tested end to end
 
 - The local control-plane path is exercised from validated plan, target lock, and qualification inputs through deterministic packet materialization, exact-file and hash verification, blocker projection, status, and read-only resume checking.
 - A strict one-stage companion-receipt fixture is exercised through import, deterministic overlay creation, exact-file verification, base-packet immutability, secret and private-endpoint rejection, symlink rejection, and base/overlay tamper detection. This is an offline importer test, not a live provider run.
@@ -199,7 +226,7 @@ PyMOL and ChimeraX are complementary renderer routes. They do not replace the po
 - Automated tests exercise the locked public 1ZVH coordinate parser and local geometry evaluator without generation, prediction, ranking, upload, or provider calls.
 - A deterministic delivery fixture exercises visible candidate sequences, raw-artifact links, structure renders, viewer-state outputs, browser evidence, storyboard/video separation, and curated-manifest scope.
 
-## Current implementation
+### Current implementation
 
 - Codex invokes selected companion skills for generation, sequence design, folding, complex prediction, ranking, optimization, and rendering. Those tools own provider calls; Binder Lane saves and checks the campaign record and delivery evidence.
 - The importer verifies one stage per directory. A multi-stage campaign uses sibling result-package directories; the release does not merge them into one package or poll their providers.
@@ -210,11 +237,11 @@ PyMOL and ChimeraX are complementary renderer routes. They do not replace the po
 - The repository contains no live 1ZVH provider receipt or ranked generated candidate. Its 1ZVH files test local coordinate evaluation.
 - Publishing the release-candidate tag, running hosted Python 3.10 through 3.14 CI on that tag, and installing from a clean Codex profile remain release operations.
 
-## What the fixture results prove
+### What the fixture results prove
 
 The synthetic canary tests file transport and hash checks. The locked 1ZVH workflow tests coordinate parsing and geometry. Neither fixture tests generated-binder quality.
 
-## Verify the release tree
+### Verify the release tree
 
 ```bash
 python3 scripts/verify_public_export.py

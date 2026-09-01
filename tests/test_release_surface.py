@@ -96,6 +96,35 @@ class ReleaseSurfaceTests(unittest.TestCase):
         }
         self.assertTrue(all((ROOT / path).is_file() for path in required))
 
+    def test_readme_leads_with_user_outcomes(self) -> None:
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        public_copy, separator, technical_copy = readme.partition(
+            "## Technical details for maintainers"
+        )
+        self.assertTrue(separator)
+        self.assertTrue(technical_copy)
+
+        public_copy = public_copy.lower()
+        for internal_term in (
+            "control and evidence layer",
+            "execution receipt",
+            "provider-neutral",
+            "claim ceiling",
+            "hash-bound",
+        ):
+            self.assertNotIn(internal_term, public_copy)
+
+        for user_benefit in (
+            "target site",
+            "cost",
+            "sequence",
+            "structure",
+            "score",
+            "image",
+            "raw files",
+        ):
+            self.assertIn(user_benefit, public_copy)
+
     def test_codex_skill_discovery_metadata_is_actionable(self) -> None:
         skill_root = ROOT / "plugins/codex-binder-lane/skills/codex-binder-lane"
         skill = (skill_root / "SKILL.md").read_text(encoding="utf-8")
