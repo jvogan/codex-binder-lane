@@ -4,8 +4,12 @@ This file records user-visible Codex Binder Lane changes.
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-09-01
+
 ### Added
 
+- Add public privacy and terms documents, directory logo assets, and submission-ready activation tests.
+- Add install-surface legal links, brand color, logo, and composer icon to the plugin manifest.
 - Import and verify one strict companion-stage receipt plus its declared outputs in a separate immutable overlay bound to an exact base packet.
 - Reject receipt/base drift, output tampering, unsafe paths, symlinks, secret-like values, and private endpoints without mutating the packet.
 - Add Anthropic's official campaign overview, technical report, released dataset, and pinned multi-target protocol prompt as an opt-in comparative or reproduction reference.
@@ -15,6 +19,7 @@ This file records user-visible Codex Binder Lane changes.
 
 ### Changed
 
+- Promote the release candidate to the stable `0.3.0` plugin identity and tune discovery metadata against direct, indirect, and negative prompts.
 - Keep the base packet dispatch-blocked at `plan-only`; the overlay can claim at most `transport-proven` and does not independently verify provider execution or scientific quality.
 - Assign the unreleased overlay checkpoint a distinct `0.3.0-rc.1` plugin identity rather than reusing the published `0.2.1` build identity.
 - Lock HTML, sequence, structure, video, browser-verification, and candidate-scope requirements in execute plans before compute begins.

@@ -1,0 +1,90 @@
+{
+  "schema_version": "codex-binder-openai-submission/v1",
+  "listing": {
+    "plugin_name": "Codex Binder Lane",
+    "publisher": "Jacob Vogan",
+    "website_url": "https://github.com/jvogan/codex-binder-lane",
+    "support_url": "https://github.com/jvogan/codex-binder-lane/issues",
+    "privacy_url": "https://github.com/jvogan/codex-binder-lane/blob/main/PRIVACY.md",
+    "terms_url": "https://github.com/jvogan/codex-binder-lane/blob/main/TERMS.md",
+    "category": "Scientific Research",
+    "type": "Skills only",
+    "availability": "All portal-supported countries and regions"
+  },
+  "starter_prompts": [
+    "Plan a binder campaign for this target site. Run only authorized routes; deliver sequences, metrics, structures, and views.",
+    "Audit my available binder-design routes, costs, evidence, and any unresolved authorization or integrity issues.",
+    "Validate this Binder Lane campaign and build the final report from its receipts."
+  ],
+  "activation_tests": {
+    "positive": [
+      {
+        "id": "positive-direct-initialize",
+        "activation_class": "direct",
+        "user_prompt": "Use $codex-binder-lane to initialize a provider-free dry-run campaign called reviewer-direct in ./reviewer-direct. Use the classic profile, public data, and no paid compute.",
+        "expected_behavior": "Invoke Codex Binder Lane, locate its bundled initializer, create a new local campaign workspace, and make no provider call.",
+        "expected_result_shape": "A concise summary plus codex-binder-plan.json, qualification-ledger.json, target-site-lock.template.json, and residue-map.template.csv under ./reviewer-direct, with unresolved target facts clearly marked.",
+        "fixture_requirements": "No account, network access, target file, or external plugin is required; use the bundled initializer and a new output directory."
+      },
+      {
+        "id": "positive-indirect-plan",
+        "activation_class": "indirect",
+        "user_prompt": "I need an end-to-end protein-binder campaign for a chosen epitope. Compare the generation, sequence-design, complex-prediction, scoring, and rendering routes I can use, keep costs and private-data transfer gated, and give me a reviewable plan before any compute runs.",
+        "expected_behavior": "Implicitly invoke Codex Binder Lane, inventory callable capabilities, separate scientific choices from transport choices, and produce a plan with material unresolved decisions and authorization gates without dispatching compute.",
+        "expected_result_shape": "A capability summary and proposed campaign plan covering target/site lock, stages, routes, controls, budget, evidence, delivery, blockers, and the next authorization decision.",
+        "fixture_requirements": "No external account or biological fixture is required; current-task capability visibility is sufficient and missing tools must be reported rather than invented."
+      },
+      {
+        "id": "positive-direct-audit",
+        "activation_class": "direct",
+        "user_prompt": "Use Binder Lane to audit my available binder-design routes, their provider and license evidence, possible costs, data-egress posture, expected artifacts, and any unresolved authorization or integrity issues. Do not run scientific compute.",
+        "expected_behavior": "Invoke Codex Binder Lane, run the static local capability inventory, compare only evidenced routes, and avoid executing discovered repositories or providers.",
+        "expected_result_shape": "A table or structured summary of available, missing, gated, and deliberately unused capabilities with provider, license, price, egress, artifact, and evidence-state gaps.",
+        "fixture_requirements": "No credentials or network access are required; use static inventory and the task's visible skill catalog."
+      },
+      {
+        "id": "positive-direct-validate-plan",
+        "activation_class": "direct",
+        "user_prompt": "Use $codex-binder-lane to validate the bundled assets/valid-dry-run-plan.fixture.json and explain what its plan-only ceiling permits and forbids.",
+        "expected_behavior": "Invoke Codex Binder Lane, resolve the fixture relative to its skill directory, run validate_plan.py locally, and interpret the result without dispatching work.",
+        "expected_result_shape": "A passing validation result, the exact fixture path and check used, and a short explanation that the dry-run plan can support planning but not provider execution or scientific-result claims.",
+        "fixture_requirements": "Use the valid-dry-run-plan.fixture.json shipped in the skill assets; no external data or account is required."
+      },
+      {
+        "id": "positive-direct-canary",
+        "activation_class": "direct",
+        "user_prompt": "Use Binder Lane to build its deterministic synthetic transport canary in a new ./reviewer-canary directory, validate it, and summarize exactly what the canary proves and does not prove.",
+        "expected_behavior": "Invoke Codex Binder Lane, run the bundled build_fixture_bundle.py and validate_bundle.py scripts locally, and preserve the transport-proven scientific boundary.",
+        "expected_result_shape": "A validated synthetic bundle with X-only sentinel sequence files, placeholder coordinates, null scientific scores, deterministic receipts and hashes, a readable report, observed cost of $0.00, and an explicit statement that no biological design or prediction occurred.",
+        "fixture_requirements": "No external account, network access, or biological input is required; use a new output directory."
+      }
+    ],
+    "negative": [
+      {
+        "id": "negative-structure-lookup",
+        "user_prompt": "Look up PDB 1ZVH and show me its chains and interface.",
+        "expected_behavior": "Do not invoke Binder Lane. Use a structure database or structure-viewer workflow, or explain which lookup capability is needed.",
+        "reason": "This is a single deposited-structure lookup and inspection, not a multi-stage binder-design campaign."
+      },
+      {
+        "id": "negative-atomic-design-call",
+        "user_prompt": "Run ProteinMPNN once on this supplied backbone and return eight sequences.",
+        "expected_behavior": "Do not invoke Binder Lane unless the user expands the request into a coordinated campaign. Use the already specified atomic sequence-design capability and its own authorization rules.",
+        "reason": "The user selected one atomic tool and one bounded operation; campaign orchestration would be accidental over-activation."
+      },
+      {
+        "id": "negative-sequence-alignment",
+        "user_prompt": "Align these protein sequences and mark the conserved residues.",
+        "expected_behavior": "Do not invoke Binder Lane. Use a sequence-alignment or biological-sequence-viewer capability.",
+        "reason": "Sequence alignment and conservation inspection do not require binder-campaign planning, execution, evidence, or delivery controls."
+      }
+    ]
+  },
+  "release_notes": "Initial public submission of Codex Binder Lane 0.3.0, a skills-only control and evidence workflow for planning, supervising, and validating protein-binder campaigns across separately authorized tools. The bundle includes provider-free initialization and validation, capability auditing, immutable packet and receipt checks, deterministic synthetic canaries, delivery validation, public legal documents, and tested direct, indirect, and negative activation boundaries. It does not include an MCP server, hosted account, or bundled scientific model.",
+  "portal_only_checks": [
+    "Select the verified Jacob Vogan developer identity in the publishing organization.",
+    "Confirm the submitter has Apps Management write permission in that organization.",
+    "Review and confirm the selected country and region availability.",
+    "Personally review and complete the submission policy attestations before selecting Submit for Review."
+  ]
+}

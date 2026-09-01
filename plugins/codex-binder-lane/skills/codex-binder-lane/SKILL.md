@@ -1,6 +1,6 @@
 ---
 name: codex-binder-lane
-description: Plan, supervise, and validate protein-binder campaigns for a chosen target site across Codex life-science plugins, hosted APIs, self-hosted compute, and compatible external engines. Use when Codex needs to select and coordinate separately authorized generation, sequence design, structure prediction, scoring, filtering, optimization, structure and sequence review, and delivery of binder sequences, site metrics, target-binder coordinates, site-highlighted visuals, and reports. Do not use for a single structure lookup or an already-specified atomic tool call.
+description: Use this when a user wants to plan, compare, supervise, or validate an end-to-end or multi-stage protein-binder campaign for a chosen target site. Trigger for direct Binder Lane requests and indirect requests to coordinate generation, sequence design, structure prediction, scoring, optimization, cost, evidence, or final delivery across separately authorized tools. Do not use for a single structure or sequence lookup, an alignment, a general protein question, or an already-specified atomic design, prediction, scoring, or rendering call.
 metadata:
   short-description: Plan and design binders in Codex—within your comp bio budget
 ---

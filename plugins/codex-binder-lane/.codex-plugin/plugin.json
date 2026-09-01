@@ -1,6 +1,6 @@
 {
   "name": "codex-binder-lane",
-  "version": "0.3.0-rc.1+codex.20260901154853",
+  "version": "0.3.0",
   "description": "Plan and design binders in Codex: pick target sites, tools and comp bio budget, then get your structures and sequences.",
   "author": {
     "name": "Jacob Vogan",
@@ -31,6 +31,11 @@
       "Audit my available binder-design routes, costs, evidence, and any unresolved authorization or integrity issues.",
       "Validate this Binder Lane campaign and build the final report from its receipts."
     ],
-    "websiteURL": "https://github.com/jvogan/codex-binder-lane"
+    "websiteURL": "https://github.com/jvogan/codex-binder-lane",
+    "privacyPolicyURL": "https://github.com/jvogan/codex-binder-lane/blob/main/PRIVACY.md",
+    "termsOfServiceURL": "https://github.com/jvogan/codex-binder-lane/blob/main/TERMS.md",
+    "brandColor": "#D72FB3",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png"
   }
 }

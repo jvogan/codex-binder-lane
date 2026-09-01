@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib.util
+import json
 import re
 import shutil
 import tempfile
@@ -24,7 +25,7 @@ class ReleaseSurfaceTests(unittest.TestCase):
         name, version = MODULE.verify_metadata(plugin, marketplace)
         self.assertGreater(count, 40)
         self.assertEqual(name, "codex-binder-lane")
-        self.assertTrue(version.startswith("0.3.0-rc.1"))
+        self.assertEqual(version, "0.3.0")
 
     def test_plugin_manifest_default_prompts_fit_codex_limit(self) -> None:
         _, plugin, _ = MODULE.verify_receipt(ROOT)
@@ -48,11 +49,15 @@ class ReleaseSurfaceTests(unittest.TestCase):
             "CHANGELOG.md",
             "CONTRIBUTING.md",
             "LICENSE",
+            "PRIVACY.md",
             "README.md",
             "SECURITY.md",
+            "TERMS.md",
+            "docs/openai-submission.json",
             "docs/release-notes-0.2.0.md",
             "docs/release-notes-0.2.1.md",
             "docs/release-notes-0.3.0-rc.1.md",
+            "docs/release-notes-0.3.0.md",
             "public-export-receipt.json",
             "scripts/verify_public_export.py",
         }
@@ -75,11 +80,14 @@ class ReleaseSurfaceTests(unittest.TestCase):
         self.assertIsNotNone(description)
         assert description is not None
         for phrase in (
-            "Plan, supervise, and validate",
+            "Use this when",
+            "end-to-end or multi-stage",
             "chosen target site",
-            "binder sequences",
-            "target-binder coordinates",
-            "site-highlighted visuals",
+            "direct Binder Lane requests",
+            "indirect requests",
+            "Do not use for",
+            "single structure or sequence lookup",
+            "already-specified atomic",
         ):
             self.assertIn(phrase, description.group(1))
 
@@ -97,6 +105,59 @@ class ReleaseSurfaceTests(unittest.TestCase):
         self.assertTrue(
             (ROOT / "plugins/codex-binder-lane/.codex-plugin/plugin.json").is_file()
         )
+
+    def test_store_submission_materials_are_complete(self) -> None:
+        submission = json.loads(
+            (ROOT / "docs/openai-submission.json").read_text(encoding="utf-8")
+        )
+        plugin = MODULE.read_json(
+            ROOT / "plugins/codex-binder-lane/.codex-plugin/plugin.json"
+        )
+        listing = submission["listing"]
+        self.assertEqual(submission["schema_version"], "codex-binder-openai-submission/v1")
+        self.assertEqual(listing["publisher"], "Jacob Vogan")
+        self.assertEqual(listing["type"], "Skills only")
+        self.assertEqual(listing["category"], "Scientific Research")
+        self.assertEqual(
+            listing["privacy_url"], plugin["interface"]["privacyPolicyURL"]
+        )
+        self.assertEqual(
+            listing["terms_url"], plugin["interface"]["termsOfServiceURL"]
+        )
+        self.assertEqual(
+            submission["starter_prompts"], plugin["interface"]["defaultPrompt"]
+        )
+
+        positives = submission["activation_tests"]["positive"]
+        negatives = submission["activation_tests"]["negative"]
+        self.assertEqual(len(positives), 5)
+        self.assertEqual(len(negatives), 3)
+        self.assertEqual(
+            {case["activation_class"] for case in positives}, {"direct", "indirect"}
+        )
+        for case in positives:
+            self.assertEqual(
+                set(case),
+                {
+                    "id",
+                    "activation_class",
+                    "user_prompt",
+                    "expected_behavior",
+                    "expected_result_shape",
+                    "fixture_requirements",
+                },
+            )
+        for case in negatives:
+            self.assertEqual(
+                set(case),
+                {"id", "user_prompt", "expected_behavior", "reason"},
+            )
+
+        manifest_assets = ("composerIcon", "logo")
+        for field in manifest_assets:
+            value = plugin["interface"][field]
+            self.assertTrue(value.startswith("./assets/"))
+            self.assertTrue((ROOT / "plugins/codex-binder-lane" / value[2:]).is_file())
 
     def test_public_prose_has_no_machine_specific_paths(self) -> None:
         for path in ROOT.rglob("*.md"):

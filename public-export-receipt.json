@@ -1,5 +1,5 @@
 {
-  "allowlist_sha256": "be9ce4e085d95187a6d1e4714b24ad78317386e60e3dafc86f6c03e16b2fa63c",
+  "allowlist_sha256": "c45e614ccbb5d294b88ec652535f00da089eadf8733584ffdc0b375408549d1e",
   "files": [
     {
       "biology_classification": "none",
@@ -29,8 +29,8 @@
       "biology_classification": "none",
       "classification": "public-documentation",
       "path": "CHANGELOG.md",
-      "sha256": "d45bd54bc29c52f970795fcbf6f326399b98b62dd73b341e7c2c119ab6ff15d8",
-      "size_bytes": 5492,
+      "sha256": "7348d654a744f400fe947f68473ba9300d7800497e43948dead413816331f080",
+      "size_bytes": 5863,
       "source": "public/CHANGELOG.md"
     },
     {
@@ -52,18 +52,34 @@
     {
       "biology_classification": "none",
       "classification": "public-documentation",
+      "path": "PRIVACY.md",
+      "sha256": "a0e399b5b3dc57737f95869cef6229f93ed626ca340970badbf3d4de1181fab9",
+      "size_bytes": 3893,
+      "source": "public/PRIVACY.md"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
       "path": "README.md",
-      "sha256": "0a1b15475bbc638a1c3da00a4303b1a67b18ee5f8f68f74556e47d218d27aabf",
-      "size_bytes": 20154,
+      "sha256": "cf00c07af0b20cf39d10d9464ea53ac4e1ab509a736e233e317f4e7ddde13905",
+      "size_bytes": 20275,
       "source": "public/README.md"
     },
     {
       "biology_classification": "none",
       "classification": "public-documentation",
       "path": "SECURITY.md",
-      "sha256": "af84333863565908a65cc722ad942f86df5235eacbff66e8e925bb49aa9181fd",
-      "size_bytes": 1397,
+      "sha256": "1539569ceb85eb6716eaeab1b666b2f3c29d1cd7ff242a0ba022be22e3eb8be2",
+      "size_bytes": 1343,
       "source": "public/SECURITY.md"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "TERMS.md",
+      "sha256": "0c974918a1d3fec6d548b87471ed10680386f15ea7da925c56c54c3ceca3441c",
+      "size_bytes": 3973,
+      "source": "public/TERMS.md"
     },
     {
       "biology_classification": "none",
@@ -92,6 +108,14 @@
     {
       "biology_classification": "none",
       "classification": "public-documentation",
+      "path": "docs/openai-submission.json",
+      "sha256": "4cc5474dad254d614d7ac6363cffe85243f8daff50adb64ec89dc44df9fc5a12",
+      "size_bytes": 7951,
+      "source": "public/docs/openai-submission.json"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-documentation",
       "path": "docs/release-notes-0.2.0.md",
       "sha256": "68cd054044825abbfca25fcb460854dfb75dcc849e726bfe091abce39dd1563c",
       "size_bytes": 2476,
@@ -115,10 +139,18 @@
     },
     {
       "biology_classification": "none",
+      "classification": "public-documentation",
+      "path": "docs/release-notes-0.3.0.md",
+      "sha256": "d1ca96f4f309a31b57c11cb4129ee27ce1bca1e9b999d6e9d33b7b4e5bde5c90",
+      "size_bytes": 2936,
+      "source": "public/docs/release-notes-0.3.0.md"
+    },
+    {
+      "biology_classification": "none",
       "classification": "plugin-metadata",
       "path": "plugins/codex-binder-lane/.codex-plugin/plugin.json",
-      "sha256": "3f1efa6dacd0ab124d991954564bc3938bd83e076b9a35fcf3cc82fa6a545555",
-      "size_bytes": 1789,
+      "sha256": "aca3c2bd4123387622a315236dff75ad1422e9f7cb671273423a681959035feb",
+      "size_bytes": 2049,
       "source": ".codex-plugin/plugin.json"
     },
     {
@@ -131,10 +163,26 @@
     },
     {
       "biology_classification": "none",
+      "classification": "public-media",
+      "path": "plugins/codex-binder-lane/assets/icon.png",
+      "sha256": "57de3d7be97280eedcf0c39d671b42318b9d0c2ec10ac5bf986851f3a0815be5",
+      "size_bytes": 69972,
+      "source": "plugins/codex-binder-lane/assets/icon.png"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-media",
+      "path": "plugins/codex-binder-lane/assets/logo.png",
+      "sha256": "c60ca5acc9a8ba535bbe4418019178998b33a5ccbec4af0d7533cc8394d6d341",
+      "size_bytes": 637163,
+      "source": "plugins/codex-binder-lane/assets/logo.png"
+    },
+    {
+      "biology_classification": "none",
       "classification": "plugin-source",
       "path": "plugins/codex-binder-lane/skills/codex-binder-lane/SKILL.md",
-      "sha256": "b92c4a90454177e9a1b6f44e3fe09a5e3bbb79363dd0846b1074ab1a99be6cfe",
-      "size_bytes": 23549,
+      "sha256": "f62bbcbeb81802292875e9f66b05087e2173a411af85c961116d9ee2642c2516",
+      "size_bytes": 23528,
       "source": "skills/codex-binder-lane/SKILL.md"
     },
     {
@@ -192,6 +240,14 @@
       "sha256": "99883018296ecc20349479e2c1ae410aa7e393bfc82186e3df2c47aec03d89d0",
       "size_bytes": 691,
       "source": "skills/codex-binder-lane/assets/target-site-lock.template.json"
+    },
+    {
+      "biology_classification": "none",
+      "classification": "public-template",
+      "path": "plugins/codex-binder-lane/skills/codex-binder-lane/assets/valid-dry-run-plan.fixture.json",
+      "sha256": "aa4c137b3d1ea36c341fc05594708421e2aefc70d0b08f30c9cbb4d8df6f45f7",
+      "size_bytes": 2729,
+      "source": "skills/codex-binder-lane/assets/valid-dry-run-plan.fixture.json"
     },
     {
       "biology_classification": "none",
@@ -525,8 +581,8 @@
       "biology_classification": "none",
       "classification": "plugin-source",
       "path": "scripts/verify_public_export.py",
-      "sha256": "e5724db1ee38ccf5060165d3c58c3b544e7fb147f3bed856525e56b2a86bf3a4",
-      "size_bytes": 10939,
+      "sha256": "79b16c5080c264f1194a0a79034328585f028d2d178ad36fa087ee672c4d8c7a",
+      "size_bytes": 12824,
       "source": "public/scripts/verify_public_export.py"
     },
     {
@@ -541,8 +597,8 @@
       "biology_classification": "none",
       "classification": "plugin-source",
       "path": "tests/test_release_surface.py",
-      "sha256": "454da3363ec4e84cb83e079a77c678af857b83265c3409e002ef6a3df1c05010",
-      "size_bytes": 5620,
+      "sha256": "29a39bf6c6023ad5a94e37393be2611059f9663ea8e27a160ea9d7fb17553f13",
+      "size_bytes": 7992,
       "source": "public/tests/test_release_surface.py"
     }
   ],

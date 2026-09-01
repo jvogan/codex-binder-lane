@@ -33,8 +33,25 @@ ALLOWED_CLASSIFICATIONS = {
 }
 LOCKED_PUBLIC_MEDIA = {
     "docs/media/binder-lane-banner.jpg": {
+        "format": "jpeg",
+        "height": 640,
         "sha256": "fd0be20b81dcb9e9a7cdf4b3432040dbb3f08bf27ced6469720c9b936b0dfa8a",
         "size_bytes": 277959,
+        "width": 1280,
+    },
+    "plugins/codex-binder-lane/assets/icon.png": {
+        "format": "png",
+        "height": 256,
+        "sha256": "57de3d7be97280eedcf0c39d671b42318b9d0c2ec10ac5bf986851f3a0815be5",
+        "size_bytes": 69972,
+        "width": 256,
+    },
+    "plugins/codex-binder-lane/assets/logo.png": {
+        "format": "png",
+        "height": 1024,
+        "sha256": "c60ca5acc9a8ba535bbe4418019178998b33a5ccbec4af0d7533cc8394d6d341",
+        "size_bytes": 637163,
+        "width": 1024,
     }
 }
 RAW_BIOLOGY_SUFFIXES = {
@@ -103,6 +120,25 @@ def sha256_file(path: Path) -> str:
     return digest.hexdigest()
 
 
+def allowlist_digest(records: list[dict[str, Any]]) -> str:
+    metadata = [
+        {
+            "biology_classification": record.get("biology_classification"),
+            "classification": record.get("classification"),
+            "path": record.get("path"),
+            "source": record.get("source"),
+        }
+        for record in records
+    ]
+    canonical = json.dumps(
+        metadata,
+        ensure_ascii=True,
+        separators=(",", ":"),
+        sort_keys=True,
+    ) + "\n"
+    return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
+
+
 def safe_relative_path(value: Any) -> str:
     if not isinstance(value, str) or not value or "\\" in value or "\x00" in value:
         raise VerificationError(f"unsafe receipt path: {value!r}")
@@ -160,8 +196,20 @@ def verify_record_metadata(record: dict[str, Any], relative_path: str, path: Pat
         data = path.read_bytes()
         if len(data) != expected["size_bytes"] or sha256_file(path) != expected["sha256"]:
             raise VerificationError(f"locked public media changed: {relative_path}")
-        if not data.startswith(b"\xff\xd8\xff\xe0") or not data.endswith(b"\xff\xd9"):
-            raise VerificationError(f"locked public media is not the reviewed JPEG: {relative_path}")
+        if expected["format"] == "jpeg":
+            if not data.startswith(b"\xff\xd8\xff\xe0") or not data.endswith(b"\xff\xd9"):
+                raise VerificationError(f"locked public media is not the reviewed JPEG: {relative_path}")
+        elif expected["format"] == "png":
+            if (
+                not data.startswith(b"\x89PNG\r\n\x1a\n")
+                or data[12:16] != b"IHDR"
+                or int.from_bytes(data[16:20], "big") != expected["width"]
+                or int.from_bytes(data[20:24], "big") != expected["height"]
+                or data[25] != 6
+            ):
+                raise VerificationError(f"locked public media is not the reviewed RGBA PNG: {relative_path}")
+        else:
+            raise VerificationError(f"unsupported locked media format: {relative_path}")
         if b"Exif\x00\x00" in data or b"http://" in data or b"https://" in data:
             raise VerificationError(f"locked public media contains forbidden metadata: {relative_path}")
         return
@@ -209,6 +257,8 @@ def verify_receipt(root: Path) -> tuple[int, dict[str, Any], dict[str, Any]]:
         raise VerificationError("receipt paths are not sorted")
     if len(paths) != len(set(paths)):
         raise VerificationError("receipt contains duplicate paths")
+    if allowlist_sha256 != allowlist_digest(records):
+        raise VerificationError("receipt allowlist_sha256 does not match file metadata")
 
     actual: set[str] = set()
     for path in root.rglob("*"):
