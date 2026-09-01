@@ -25,7 +25,7 @@ class ReleaseSurfaceTests(unittest.TestCase):
         name, version = MODULE.verify_metadata(plugin, marketplace)
         self.assertGreater(count, 40)
         self.assertEqual(name, "codex-binder-lane")
-        self.assertEqual(version, "0.3.3")
+        self.assertEqual(version, "0.3.4")
 
     def test_plugin_manifest_default_prompts_fit_codex_limit(self) -> None:
         _, plugin, _ = MODULE.verify_receipt(ROOT)
@@ -63,12 +63,21 @@ class ReleaseSurfaceTests(unittest.TestCase):
         ):
             self.assertNotIn(internal_term, public_copy)
         for user_benefit in (
-            "target site",
-            "cost",
-            "sequence",
+            "target",
+            "constraints",
             "structure",
-            "score",
-            "image",
+            "site",
+            "tools",
+            "routes",
+            "campaign size",
+            "parallel lanes",
+            "filter",
+            "iterate",
+            "sequences",
+            "metrics",
+            "visuals",
+            "video",
+            "report",
         ):
             self.assertIn(user_benefit, public_copy)
 
@@ -91,6 +100,7 @@ class ReleaseSurfaceTests(unittest.TestCase):
             "docs/release-notes-0.3.1.md",
             "docs/release-notes-0.3.2.md",
             "docs/release-notes-0.3.3.md",
+            "docs/release-notes-0.3.4.md",
             "public-export-receipt.json",
             "scripts/verify_public_export.py",
         }
@@ -98,6 +108,11 @@ class ReleaseSurfaceTests(unittest.TestCase):
 
     def test_readme_leads_with_user_outcomes(self) -> None:
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        self.assertIn(
+            "Plan and design binders in Codex: pick target sites, tools and comp bio "
+            "budget, then get your structures and sequences.",
+            readme,
+        )
         public_copy, separator, technical_copy = readme.partition(
             "## Technical details for maintainers"
         )
@@ -115,13 +130,18 @@ class ReleaseSurfaceTests(unittest.TestCase):
             self.assertNotIn(internal_term, public_copy)
 
         for user_benefit in (
-            "target site",
+            "binding site",
             "cost",
             "sequence",
             "structure",
             "score",
             "image",
             "raw files",
+            "candidate count",
+            "parallel lanes",
+            "design rounds",
+            "cloud",
+            "animation",
         ):
             self.assertIn(user_benefit, public_copy)
 
@@ -132,7 +152,7 @@ class ReleaseSurfaceTests(unittest.TestCase):
         plugin = MODULE.read_json(
             ROOT / "plugins/codex-binder-lane/.codex-plugin/plugin.json"
         )
-        public_short_description = "Design binders within budget"
+        public_short_description = "Run protein binder campaigns"
 
         frontmatter = skill.split("---", 2)[1]
         self.assertRegex(frontmatter, r"(?m)^name: codex-binder-lane$")
@@ -140,14 +160,13 @@ class ReleaseSurfaceTests(unittest.TestCase):
         self.assertIsNotNone(description)
         assert description is not None
         for phrase in (
-            "Use this when",
-            "end-to-end or multi-stage",
-            "chosen target site",
+            "multi-stage protein-binder campaigns",
+            "Choose a target structure or site",
             "direct Binder Lane requests",
             "indirect requests",
+            "plugins, APIs, cloud compute, local tools, or a mix",
             "Do not use for",
-            "single structure or sequence lookup",
-            "already-specified atomic",
+            "one already-specified tool call",
         ):
             self.assertIn(phrase, description.group(1))
 

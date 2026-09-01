@@ -1,11 +1,15 @@
 ---
 name: codex-binder-lane
-description: Use this when a user wants to plan, compare, supervise, or validate an end-to-end or multi-stage protein-binder campaign for a chosen target site. Trigger for direct Binder Lane requests and indirect requests to coordinate generation, sequence design, structure prediction, scoring, optimization, cost, evidence, or final delivery across separately authorized tools. Do not use for a single structure or sequence lookup, an alignment, a general protein question, or an already-specified atomic design, prediction, scoring, or rendering call.
+description: Use for multi-stage protein-binder campaigns. Choose a target structure or site; select tools and routes; set scale, metrics, and budget; run, compare, filter, refine, and deliver candidates. Trigger for direct Binder Lane requests and indirect requests that span design, prediction, scoring, or visualization steps. Routes can use plugins, APIs, cloud compute, local tools, or a mix. Do not use for a lookup, alignment, general protein question, or one already-specified tool call.
 ---
 
 # Codex Binder Lane
 
-Use this skill when the user wants to design or compare protein binders for a target site. Make the target, chain, numbering, site-selection method, candidate scope, and delivery explicit. Then create one machine-readable plan, choose compatible generation, design, prediction, scoring, and rendering tools, and supervise the selected companions. The finished delivery gives every scoped candidate its full sequence, site-aware metrics, target–binder coordinates, and a clear target view with the binder on the target and the requested site highlighted.
+Binder Lane coordinates multi-stage protein-binder campaigns. Define the target, chain, numbering, site, candidate scope, and outputs. Then write one plan, choose the tools, run the stages, and check the results. Deliver each candidate's sequence, site metrics, target–binder coordinates, and a target view with the site highlighted.
+
+The user can set each choice or delegate it to Codex. For delegated choices, inspect the goal, target data, available tools, scientific fit, license, privacy, cost, and compute. Then propose the structure, site, tools, routes, candidate count, metrics, rounds, and stop rules. A campaign can mix plugins, APIs, cloud jobs, and local tools.
+
+For a side-by-side comparison, keep the target, site, inputs, candidate count, metrics, and promotion rules fixed. Give each lane a stable ID and separate results. Promote candidates from any lane into a fixed number of follow-up rounds.
 
 This skill is standalone; no sibling repository is required. External workspaces may supply optional adapters or comparative evidence when present and deliberately selected. Their absence never blocks local planning, validation, packet creation, or companion execution by another selected capability.
 
@@ -62,6 +66,8 @@ Before generation, resolve the decisions that affect the selected campaign. Insp
 7. **Controls and winner rules:** one primary promotion metric with direction, aggregation, target-specific threshold or calibration plan, secondary metrics, diversity constraints, and positive/negative controls. Failed control separation means measured but unranked.
 8. **Budget, rounds, and stopping:** hard campaign ceiling, advisory wall-clock cap, license/provider approvals, maximum rounds, parents and variants, mutating operator, convergence rule, and zero-passer stop. Copying candidates is not optimization.
 9. **Evidence and handoff:** manifest/receipt retention, privacy destination, required artifacts, viewer/report outputs, computational claim ceiling, and portable downstream files.
+
+For a side-by-side comparison, represent each lane with stable, unique stage IDs. An end-to-end lane may be one combined stage whose `covers` list declares the full funnel; a decomposed lane may use several stage IDs with the same lane prefix. Record the lane hypothesis and keep shared target/site inputs, candidate counts, seed strategy, metrics, and promotion rules aligned unless a declared experimental difference requires otherwise. Compare scientific results, cost, runtime, failures, and delivered artifacts without treating unlike metrics as interchangeable.
 
 Write these choices to the initialized `codex-binder-plan.json` using [the plan contract](references/plan-contract.md) and validate it before any companion execution:
 
@@ -207,6 +213,7 @@ Return a clear candidate-level delivery:
 Also return:
 
 - the agreed plan and why each capability was selected;
+- a side-by-side lane summary when more than one workflow was compared, including the shared conditions, deliberate differences, candidate counts, metrics, costs, and promotions;
 - available, missing, gated, and deliberately unused capabilities;
 - requested, generated, validated, passed, promoted, and delivered counts;
 - primary and secondary metrics with control/calibration status;

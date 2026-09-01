@@ -1,7 +1,7 @@
 {
   "name": "codex-binder-lane",
-  "version": "0.3.3",
-  "description": "Design protein binders for a chosen target site, compare approved tools and costs, and organize sequences, structures, scores, and images.",
+  "version": "0.3.4",
+  "description": "Plan and design binders in Codex: pick target sites, tools and comp bio budget, then get your structures and sequences.",
   "author": {
     "name": "Jacob Vogan",
     "url": "https://github.com/jvogan"
@@ -18,8 +18,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Codex Binder Lane",
-    "shortDescription": "Design binders within budget",
-    "longDescription": "Design protein binders for a specific target site while staying within your budget. Binder Lane coordinates the scientific tools you approve, checks each stage, and organizes candidate sequences, predicted structures, scores, and images. It asks before starting paid work or sharing private data.",
+    "shortDescription": "Run protein binder campaigns",
+    "longDescription": "Give Codex a target and your constraints. Codex can choose the structure, site, tools, routes, and campaign size; run and compare parallel lanes; filter and iterate on candidates; and return sequences, target–binder structures, metrics, visuals, video, and a report.",
     "developerName": "Jacob Vogan",
     "category": "Scientific Research",
     "capabilities": [
@@ -27,9 +27,9 @@
       "Write"
     ],
     "defaultPrompt": [
-      "Design protein binders for this target and binding site. Compare available tools and costs before starting paid work.",
-      "Review these protein binder candidates. Check their sequences, structures, and scores, then flag weak or missing evidence.",
-      "Create a final report with each binder's sequence, predicted structure, binding-site results, images, costs, and open questions."
+      "Plan a binder campaign for this protein goal. Choose the structure, target site, tools, candidate count, and budget.",
+      "Compare two binder-design workflows side by side, score them consistently, and promote the strongest candidates.",
+      "Run another design round from these finalists, filter by my metrics, and return sequences, structures, visuals, and costs."
     ],
     "websiteURL": "https://github.com/jvogan/codex-binder-lane",
     "privacyPolicyURL": "https://github.com/jvogan/codex-binder-lane/blob/main/PRIVACY.md",

@@ -4,6 +4,15 @@ This file records user-visible Codex Binder Lane changes.
 
 ## [Unreleased]
 
+## [0.3.4] - 2026-09-01
+
+### Changed
+
+- Explain structure and site selection, mixed execution routes, candidate scale, workflow comparisons, design rounds, and complete outputs in plain English.
+- Add matched comparison lanes to the skill instructions and default prompt.
+- Keep policy and implementation language out of the README introduction and store listing.
+- Remove the stale release-candidate note and restore the private exporter as the source for public releases.
+
 ## [0.3.3] - 2026-09-01
 
 ### Changed

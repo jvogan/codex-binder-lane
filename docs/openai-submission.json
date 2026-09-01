@@ -2,7 +2,7 @@
   "schema_version": "codex-binder-openai-submission/v1",
   "listing": {
     "plugin_name": "Codex Binder Lane",
-    "subtitle": "Design binders within budget",
+    "subtitle": "Run protein binder campaigns",
     "publisher": "Jacob Vogan",
     "website_url": "https://github.com/jvogan/codex-binder-lane",
     "support_url": "https://github.com/jvogan/codex-binder-lane/issues",
@@ -13,9 +13,9 @@
     "availability": "All portal-supported countries and regions"
   },
   "starter_prompts": [
-    "Design protein binders for this target and binding site. Compare available tools and costs before starting paid work.",
-    "Review these protein binder candidates. Check their sequences, structures, and scores, then flag weak or missing evidence.",
-    "Create a final report with each binder's sequence, predicted structure, binding-site results, images, costs, and open questions."
+    "Plan a binder campaign for this protein goal. Choose the structure, target site, tools, candidate count, and budget.",
+    "Compare two binder-design workflows side by side, score them consistently, and promote the strongest candidates.",
+    "Run another design round from these finalists, filter by my metrics, and return sequences, structures, visuals, and costs."
   ],
   "activation_tests": {
     "positive": [
@@ -30,18 +30,18 @@
       {
         "id": "positive-indirect-plan",
         "activation_class": "indirect",
-        "user_prompt": "I need an end-to-end protein-binder campaign for a chosen epitope. Compare the generation, sequence-design, complex-prediction, scoring, and rendering routes I can use, keep costs and private-data transfer gated, and give me a reviewable plan before any compute runs.",
-        "expected_behavior": "Implicitly invoke Codex Binder Lane, inventory callable capabilities, separate scientific choices from transport choices, and produce a plan with material unresolved decisions and authorization gates without dispatching compute.",
-        "expected_result_shape": "A capability summary and proposed campaign plan covering target/site lock, stages, routes, controls, budget, evidence, delivery, blockers, and the next authorization decision.",
+        "user_prompt": "I want binders for this protein goal, but I have not chosen the best target structure, binding site, tools, candidate count, or budget. Help me compare the options and plan the campaign before any compute runs.",
+        "expected_behavior": "Implicitly invoke Codex Binder Lane, inspect the supplied goal and callable capabilities, propose target and site choices, separate scientific choices from execution routes, and produce a plan with authorization gates without dispatching compute.",
+        "expected_result_shape": "A proposed campaign covering structure and site choices, tools and routes, scale, controls, metrics, budget, licensing, privacy, delivery, unresolved questions, and the next authorization decision.",
         "fixture_requirements": "No external account or biological fixture is required; current-task capability visibility is sufficient and missing tools must be reported rather than invented."
       },
       {
-        "id": "positive-direct-audit",
-        "activation_class": "direct",
-        "user_prompt": "Use Binder Lane to audit my available binder-design routes, their provider and license evidence, possible costs, data-egress posture, expected artifacts, and any unresolved authorization or integrity issues. Do not run scientific compute.",
-        "expected_behavior": "Invoke Codex Binder Lane, run the static local capability inventory, compare only evidenced routes, and avoid executing discovered repositories or providers.",
-        "expected_result_shape": "A table or structured summary of available, missing, gated, and deliberately unused capabilities with provider, license, price, egress, artifact, and evidence-state gaps.",
-        "fixture_requirements": "No credentials or network access are required; use static inventory and the task's visible skill catalog."
+        "id": "positive-indirect-compare-lanes",
+        "activation_class": "indirect",
+        "user_prompt": "Compare a local protein-binder workflow with a hosted workflow on the same target site. Use the same candidate count and scoring rules, estimate costs and license limits, and show me a side-by-side plan before running either lane.",
+        "expected_behavior": "Implicitly invoke Codex Binder Lane, create stable comparison lanes with shared target, site, candidate scope, and metrics, then separate each lane's tools, route, cost, license, and authorization requirements without dispatching compute.",
+        "expected_result_shape": "A matched comparison plan naming shared conditions, deliberate lane differences, tools and routes, candidate counts, metrics, costs, licenses, privacy boundaries, stop rules, outputs, and the next authorization decision.",
+        "fixture_requirements": "No credentials, network access, or biological fixture is required; use static capability evidence and mark unavailable or unverified routes instead of inventing them."
       },
       {
         "id": "positive-direct-validate-plan",
@@ -81,7 +81,7 @@
       }
     ]
   },
-  "release_notes": "Codex Binder Lane 0.3.3 improves the public listing for clarity. It helps users design protein binders for a chosen target site, compare approved tools and costs, review candidate results, and organize sequences, predicted structures, scores, and images. It remains a skills-only plugin with no hosted account or bundled scientific model.",
+  "release_notes": "Codex Binder Lane 0.3.4 covers the full campaign workflow in plain English: choose or propose the structure, site, tools, scale, metrics, and stop rules; run plugins, APIs, cloud compute, local tools, or a mix; compare matched workflows; refine candidates; and deliver sequences, structures, metrics, visuals, optional video, costs, and raw files.",
   "portal_only_checks": [
     "Select the verified Jacob Vogan developer identity in the publishing organization.",
     "Confirm the submitter has Apps Management write permission in that organization.",

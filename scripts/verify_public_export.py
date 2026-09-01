@@ -35,6 +35,7 @@ LOCKED_PUBLIC_MEDIA = {
     "docs/media/binder-lane-banner.jpg": {
         "format": "jpeg",
         "height": 640,
+        "source": "docs/media/binder-lane-banner.jpg",
         "sha256": "fd0be20b81dcb9e9a7cdf4b3432040dbb3f08bf27ced6469720c9b936b0dfa8a",
         "size_bytes": 277959,
         "width": 1280,
@@ -42,6 +43,7 @@ LOCKED_PUBLIC_MEDIA = {
     "plugins/codex-binder-lane/assets/icon.png": {
         "format": "png",
         "height": 256,
+        "source": "assets/icon.png",
         "sha256": "57de3d7be97280eedcf0c39d671b42318b9d0c2ec10ac5bf986851f3a0815be5",
         "size_bytes": 69972,
         "width": 256,
@@ -49,6 +51,7 @@ LOCKED_PUBLIC_MEDIA = {
     "plugins/codex-binder-lane/assets/logo.png": {
         "format": "png",
         "height": 1024,
+        "source": "assets/logo.png",
         "sha256": "c60ca5acc9a8ba535bbe4418019178998b33a5ccbec4af0d7533cc8394d6d341",
         "size_bytes": 637163,
         "width": 1024,
@@ -191,7 +194,7 @@ def verify_record_metadata(record: dict[str, Any], relative_path: str, path: Pat
         safe_relative_path(source)
     if classification == "public-media":
         expected = LOCKED_PUBLIC_MEDIA.get(relative_path)
-        if expected is None or source != relative_path:
+        if expected is None or source != expected["source"]:
             raise VerificationError(f"unapproved public media: {relative_path}")
         data = path.read_bytes()
         if len(data) != expected["size_bytes"] or sha256_file(path) != expected["sha256"]:
